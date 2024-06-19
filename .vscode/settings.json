@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "build/": true,
+    ".editorconfig": true,
+    "tsconfig.tsbuildinfo": true
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "i18n-ally.localesPaths": ["messages"],
+  "i18n-ally.sourceLanguage": "zh-TW",
+  "i18n-ally.keystyle": "nested"
+}

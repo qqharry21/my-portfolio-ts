@@ -1,0 +1,28 @@
+# Ignore build output
+/.next/
+
+# Ignore node_modules
+/node_modules/
+
+package-lock.json
+package.json
+coverage
+
+# Ignore test files
+/__tests__/
+**/*.test.tsx
+
+.husky/*
+.github
+.vscode
+
+.env*.local
+
+tsconfig.tsbuildinfo
+
+**/*.config.js
+**/*.config.mjs
+**/*.d.ts
+
+/tailwindcss-settings
+

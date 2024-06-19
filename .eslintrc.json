@@ -1,3 +1,104 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": ["build", ".eslintrc.json"],
+  "plugins": ["simple-import-sort", "import", "react", "@typescript-eslint"],
+  "rules": {
+    "dot-notation": "off",
+    "no-console": "warn",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unknown-property": "off",
+    "react/jsx-uses-react": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "@typescript-eslint/no-invalid-void-type": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/promise-function-async": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-unsafe-argument": "warn",
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/no-misused-promises": [
+      "warn",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "@typescript-eslint/no-confusing-void-expression": [
+      "error",
+      {
+        "ignoreArrowShorthand": true,
+        "ignoreVoidOperator": true
+      }
+    ],
+    "@typescript-eslint/dot-notation": [
+      "error",
+      {
+        "allowPrivateClassPropertyAccess": true,
+        "allowProtectedClassPropertyAccess": true,
+        "allowIndexSignaturePropertyAccess": true
+      }
+    ],
+    "tailwindcss/no-custom-classname": "off",
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          ["^@?\\w", "^react\\w"],
+          ["^next(?:/[^/]+)?$"],
+          ["^next-[^-]+$"],
+          // Your internal path aliases
+          ["^@/public(\\/.*|$)"],
+          ["^@/components(\\/.*|$)"],
+          ["^@/hooks(\\/.*|$)"],
+          ["^@/styles(\\/.*|$)"],
+          ["^@/lib(\\/.*|$)"],
+          ["^@/utils(\\/.*|$)"],
+
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports (CSS, SCSS)
+          ["^.+\\.s?(css)$"]
+        ]
+      }
+    ],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  }
 }
