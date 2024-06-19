@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 
+import { PreLoader } from '@/components/pre-loader';
+
 import type { Locale } from '@/lib/locales';
 
-import './globals.css';
+import { notoSans, spaceGrotesk } from '../../styles/fonts';
 
-const inter = Inter({ subsets: ['latin'] });
+import { Providers } from './providers';
+
+import '../../styles/globals.css';
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const t = await getTranslations();
@@ -27,18 +30,20 @@ export const generateMetadata = async (): Promise<Metadata> => {
 export default async function LocaleLayout({
   children,
   params: { locale },
-}: {
-  children: React.ReactNode;
+}: PropsWithChildren & {
   params: { locale: Locale };
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+      <body className={`${notoSans.variable} ${spaceGrotesk.variable}`}>
+        <NextIntlClientProvider messages={messages}>
+          <Providers>
+            <PreLoader />
+            {children}
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 export {};
 
-import en from './messages/en-US.json';
+import en from './messages/en.json';
 import zh from './messages/zh-TW.json';
 
 type Messages = typeof en | typeof zh;

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 
 import { fontSize } from './tailwind-settings/fontSize';
@@ -27,6 +28,9 @@ const config = {
       width: spaces.width,
       maxHeight: spaces.height,
       maxWidth: spaces.width,
+      fontFamily: {
+        default: ['var(--font-spaceGrotesk)', 'var(--font-notoSans)', ...fontFamily.sans],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -79,6 +83,10 @@ const config = {
       },
       content: {
         none: '""',
+      },
+      zIndex: {
+        1: '1',
+        99: '99',
       },
       keyframes: {
         spin: {
