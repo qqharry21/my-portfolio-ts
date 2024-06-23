@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 
+import { Header } from '@/components/header';
 import { PreLoader } from '@/components/pre-loader';
 
 import type { Locale } from '@/lib/locales';
@@ -41,6 +42,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <PreLoader />
+            <Header />
             {children}
           </Providers>
         </NextIntlClientProvider>
