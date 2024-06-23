@@ -10,7 +10,7 @@ import Logo from '@/public/assets/light_logo.svg';
 
 import { Hamburger } from '../hamburger';
 
-import { MobileNav } from './mobile-nav/mobile-nav';
+import { MobileNav } from './mobile-nav';
 import { Nav } from './nav';
 
 export const Header = () => {
