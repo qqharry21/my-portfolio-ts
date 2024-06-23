@@ -86,6 +86,7 @@ const config = {
       },
       zIndex: {
         1: '1',
+        5: '5',
         99: '99',
       },
       keyframes: {

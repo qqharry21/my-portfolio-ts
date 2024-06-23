@@ -73,4 +73,8 @@
   body {
     @apply bg-background font-default text-foreground;
   }
+  button,
+  a {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary;
+  }
 }
