@@ -1,4 +1,6 @@
 {
-  "name": "Harry Chen",
-  "job_title": "Frontend Developer"
+  "personal_info": {
+    "name": "Harry Chen",
+    "job_title": "Frontend Developer"
+  }
 }

@@ -17,8 +17,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
   const t = await getTranslations();
   return {
     title: {
-      default: `${t('name')} - ${t('job_title')}`,
-      template: `%s - ${t('job_title')}`,
+      default: `${t('personal_info.name')} - ${t('personal_info.job_title')}`,
+      template: `%s - ${t('personal_info.job_title')}`,
     },
     description: 'A personal portfolio website built with Next.js and Tailwind CSS.',
     icons: {

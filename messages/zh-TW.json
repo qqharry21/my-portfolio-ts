@@ -1,4 +1,6 @@
 {
-  "name": "陳泉豪",
-  "job_title": "前端工程師"
+  "personal_info": {
+    "name": "陳泉豪",
+    "job_title": "前端工程師"
+  }
 }
