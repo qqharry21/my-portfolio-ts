@@ -30,11 +30,11 @@ export default function PreLoaderContent({
   const curve = {
     initial: {
       d: initialPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 1.5, ease: [0.76, 0, 0.24, 1] },
     },
     exit: {
       d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
+      transition: { duration: 1.5, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
     },
   };
 
@@ -43,16 +43,18 @@ export default function PreLoaderContent({
       variants={slideUp}
       initial='initial'
       exit='exit'
-      className='container fixed z-99 flex min-h-screen w-full items-center justify-center bg-primary text-6xl font-bold text-primary-foreground'
+      className='fixed z-99 flex min-h-screen w-full items-center justify-center bg-primary text-6xl font-bold text-primary-foreground'
     >
       {dimension.width > 0 && (
         <>
-          <TypingAnimation
-            text={`Hey there!\n I'm Harry. Welcome to my portfolio~`}
-            className='z-1 whitespace-pre-wrap'
-            duration={80}
-            onAnimationComplete={onAnimationComplete}
-          />
+          <div className='container relative z-99'>
+            <TypingAnimation
+              text={`Hey there!\n I'm Harry. Welcome to my portfolio~`}
+              className='z-1 whitespace-pre-wrap'
+              duration={80}
+              onAnimationComplete={onAnimationComplete}
+            />
+          </div>
           <svg className='absolute top-0 h-[calc(100%+300px)] w-full'>
             <motion.path
               variants={curve}
