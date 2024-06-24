@@ -28,7 +28,7 @@ export default function FlipText({
       <AnimatePresence mode='wait'>
         {word.split('').map((char, i) => (
           <motion.span
-            key={i}
+            key={`letter-${i}`}
             initial='hidden'
             animate='visible'
             exit='hidden'
