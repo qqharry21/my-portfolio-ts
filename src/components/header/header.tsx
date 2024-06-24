@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Logo from '@/public/assets/light_logo.svg';
+import Logo from '@/public/assets/dark_logo.svg';
 
 import { Hamburger } from '../hamburger';
 
@@ -16,8 +16,8 @@ import { Nav } from './nav';
 export const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <header className='container relative bg-transparent'>
-      <div className='flex items-center justify-between py-4'>
+    <header className='absolute z-5 w-full bg-transparent'>
+      <div className='container flex items-center justify-between py-4'>
         <Link
           href='/'
           className='relative size-16'

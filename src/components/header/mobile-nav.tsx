@@ -4,10 +4,11 @@ import { MailIcon, PhoneIcon } from 'lucide-react';
 
 import { useSelectedLayoutSegment } from 'next/navigation';
 
-import { Link } from '@/lib/navigation';
 import { routes } from '@/lib/routes';
 
-const MotionLink = m(Link);
+import { NavigationLink } from '../navigation-link';
+
+const MotionLink = m(NavigationLink);
 
 const navVariants: Variants = {
   hidden: {
