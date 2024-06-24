@@ -1,14 +1,15 @@
-import FlipText from '@/components/flip-text';
+import { HeroBanner } from '@/components/hero-banner';
 
 import { Link } from '@/lib/navigation';
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <HeroBanner />
+
       <div className='h-screen'>
-        <FlipText word='src/app/page.tsx' />
+        <Link href='/side-projects'>Side projects</Link>
       </div>
-      <Link href='/side-projects'>Side projects</Link>
-    </div>
+    </>
   );
 }

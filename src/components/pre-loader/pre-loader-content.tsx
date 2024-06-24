@@ -43,7 +43,7 @@ export default function PreLoaderContent({
       variants={slideUp}
       initial='initial'
       exit='exit'
-      className='fixed z-99 flex min-h-screen w-full items-center justify-center bg-primary text-6xl font-bold text-primary-foreground'
+      className='fixed z-99 flex min-h-screen w-full items-center justify-center bg-muted text-6xl font-bold'
     >
       {dimension.width > 0 && (
         <>
@@ -60,7 +60,7 @@ export default function PreLoaderContent({
               variants={curve}
               initial='initial'
               exit='exit'
-              className='fill-primary'
+              className='fill-muted'
             />
           </svg>
         </>
