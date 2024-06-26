@@ -42,7 +42,7 @@ export const MobileNav = ({ onClose }: { onClose: () => void }) => {
   const segment = useSelectedLayoutSegment();
   return (
     <m.div
-      className='fixed right-0 top-0 z-5 h-screen bg-muted p-24'
+      className='fixed right-0 top-0 z-5 h-screen bg-muted px-14 py-24 max-2xs:w-full md:p-24'
       initial='hidden'
       animate='show'
       exit='exit'
