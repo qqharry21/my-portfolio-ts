@@ -1,17 +1,15 @@
-import { Link } from '@/lib/navigation';
-
-import { AboutBanner } from './_components/about-banner';
+import { AboutSection } from './_components/about-section';
+import { ExperienceSection } from './_components/experience-section';
 import { HeroBanner } from './_components/hero-banner';
+import { HomeSideProjectList } from './_components/home-side-project-list';
 
 export default function Home() {
   return (
     <>
       <HeroBanner />
-      <AboutBanner />
-
-      <div className='h-screen'>
-        <Link href='/side-projects'>Side projects</Link>
-      </div>
+      <AboutSection />
+      <ExperienceSection />
+      <HomeSideProjectList />
     </>
   );
 }

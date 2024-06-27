@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-export const AboutBanner = () => {
+export const AboutSection = () => {
   return (
-    <div className='relative py-24 md:py-32'>
+    <div className='relative pt-32 md:pt-60'>
       <div className='container flex max-w-md flex-col items-center justify-center gap-8 md:max-w-4xl md:gap-16 xl:max-w-7xl'>
         <h2 className='hidden'>About Me</h2>
         <div className='flex w-full flex-wrap items-start gap-16 md:justify-between md:gap-x-24'>
@@ -19,8 +19,10 @@ export const AboutBanner = () => {
             I&apos;m graduated from the{' '}
             <Link
               href='http://www.csie.tku.edu.tw'
-              className='underline'
+              className='underline underline-offset-4'
               prefetch={false}
+              target='_blank'
+              rel='noreferrer noopener '
             >
               Tamkang University
             </Link>{' '}

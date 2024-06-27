@@ -15,12 +15,14 @@ export const HeroBanner = () => {
             Harry Chen
           </h1>
           <div className='text-base text-primary-foreground/80 md:text-xl'>Frontend Developer</div>
-          <p className='mt-4 max-w-md whitespace-pre-wrap text-pretty text-base text-muted'>
+          <p className='mt-4 max-w-md whitespace-pre-wrap text-base text-muted max-md:text-balance'>
             I&apos;m a Frontend Developer who loves to build things and learn new stuff. Currently
             working at{' '}
             <Link
               href='https://www.wits.com/tw'
-              className='underline'
+              className='underline underline-offset-4'
+              target='_blank'
+              rel='noreferrer noopener'
             >
               Wits
             </Link>
