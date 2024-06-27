@@ -1,15 +1,15 @@
-import { AboutSection } from './_components/about-section';
-import { ExperienceSection } from './_components/experience-section';
 import { HeroBanner } from './_components/hero-banner';
-import { HomeSideProjectList } from './_components/home-side-project-list';
+import { HomeAboutSection } from './_components/home-about-section';
+import { HomeExperiences } from './_components/home-experiences';
+import { HomeSideProjects } from './_components/home-side-projects';
 
 export default function Home() {
   return (
     <>
       <HeroBanner />
-      <AboutSection />
-      <ExperienceSection />
-      <HomeSideProjectList />
+      <HomeAboutSection />
+      <HomeExperiences />
+      <HomeSideProjects />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const AboutSection = () => {
+export const HomeAboutSection = () => {
   return (
     <div className='relative pt-32 md:pt-60'>
       <div className='container flex max-w-md flex-col items-center justify-center gap-8 md:max-w-4xl md:gap-16 xl:max-w-7xl'>

@@ -17,7 +17,7 @@ const experienceMap = {
   },
 };
 
-export const ExperienceSection = () => {
+export const HomeExperiences = () => {
   const format = useFormatter();
   const t = useTranslations('work_experience');
 
