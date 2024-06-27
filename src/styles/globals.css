@@ -33,6 +33,7 @@
     --ring: 210 32% 23%; /* #27374D */
 
     --radius: 0.5rem;
+    --scroll-size: 0rem;
   }
 
   .dark {
@@ -66,15 +67,75 @@
   }
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 @layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased; /* for safari & chrome */
+    -moz-osx-font-smoothing: grayscale; /* for firefox */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+  }
+
   body {
     @apply bg-background font-default text-foreground;
+
+    scrollbar-gutter: stable;
+    text-rendering: optimizeLegibility;
   }
+
   button,
   a {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary;
+  }
+
+  ::selection {
+    @apply bg-primary text-white;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: var(--scroll-size);
+    height: var(--scroll-size);
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply rounded-md bg-primary/20;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-primary/80 transition-colors duration-200 ease-in-out;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
   }
 }
