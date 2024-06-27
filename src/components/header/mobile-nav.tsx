@@ -1,8 +1,11 @@
 import type { Variants } from 'framer-motion';
 import { m } from 'framer-motion';
+import { useLenis } from 'lenis/react';
 import { MailIcon, PhoneIcon } from 'lucide-react';
 
 import { useSelectedLayoutSegment } from 'next/navigation';
+
+import { useTranslations } from 'next-intl';
 
 import { routes } from '@/lib/routes';
 
@@ -40,6 +43,13 @@ const routeVariants: Variants = {
 
 export const MobileNav = ({ onClose }: { onClose: () => void }) => {
   const segment = useSelectedLayoutSegment();
+  const t = useTranslations();
+  const lenis = useLenis();
+
+  const onClick = (href: string) => {
+    lenis?.scrollTo(href);
+    onClose();
+  };
   return (
     <m.div
       className='fixed right-0 top-0 z-5 h-screen bg-muted px-14 py-24 max-2xs:w-full md:p-24'
@@ -57,9 +67,9 @@ export const MobileNav = ({ onClose }: { onClose: () => void }) => {
               data-active={route.href === `/${segment}`}
               className='relative text-left text-4xl before:absolute before:-left-6 before:top-half before:size-2 before:-translate-y-half before:scale-0 before:rounded-full before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:content-none hover:text-primary/80 hover:before:scale-100 focus-visible:before:scale-100 data-[active=true]:before:scale-100'
               variants={routeVariants}
-              onClick={onClose}
+              onClick={() => onClick(route.href)}
             >
-              {route.name}
+              {t(route.name)}
             </MotionLink>
           ))}
         </div>

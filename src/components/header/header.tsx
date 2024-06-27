@@ -1,43 +1,15 @@
-'use client';
+import pick from 'lodash/pick';
 
-import { AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-import Image from 'next/image';
-import Link from 'next/link';
-
-import Logo from '@/public/assets/dark_logo.svg';
-
-import { Hamburger } from '../hamburger';
-
-import { MobileNav } from './mobile-nav';
-import { Nav } from './nav';
+import { ClientHeader } from './client-header';
 
 export const Header = () => {
-  const [open, setOpen] = useState(false);
-  return (
-    <header className='absolute z-5 w-full bg-transparent'>
-      <div className='container flex items-center justify-between py-4'>
-        <Link
-          href='/'
-          className='relative size-16'
-          passHref
-        >
-          <Image
-            src={Logo}
-            alt='logo'
-            className='object-contain object-center'
-            priority
-          />
-        </Link>
+  const messages = useMessages();
 
-        <Nav />
-      </div>
-      <Hamburger
-        isOpen={open}
-        setOpen={setOpen}
-      />
-      <AnimatePresence>{open && <MobileNav onClose={() => setOpen(false)} />}</AnimatePresence>
-    </header>
+  return (
+    <NextIntlClientProvider messages={pick(messages, 'nav')}>
+      <ClientHeader />
+    </NextIntlClientProvider>
   );
 };
