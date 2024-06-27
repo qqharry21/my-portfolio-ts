@@ -25,6 +25,6 @@ export default async function middleware(request: NextRequest) {
 export const config = {
   // Match only internationalized pathnames
   // Skip all paths that should not be internationalized.
-  matcher: ['/', '/(zh-TW|en)/:path*'],
+  matcher: ['/', '/(en|zh-TW)/:path*'],
   // matcher: ['/((?!api|_next/static|_next/image|assets|videos).*)'],
 };

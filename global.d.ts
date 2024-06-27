@@ -1,9 +1,8 @@
 export {};
 
 import en from './messages/en.json';
-import zh from './messages/zh-TW.json';
 
-type Messages = typeof en | typeof zh;
+type Messages = typeof en;
 
 declare global {
   interface IntlMessages extends Messages {}
