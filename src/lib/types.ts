@@ -10,3 +10,8 @@ export interface Experience {
   endDate: string | null;
   externalLink: string | null;
 }
+
+export interface IRoute {
+  name: string;
+  href: string;
+}
