@@ -15,4 +15,6 @@ declare global {
   interface WithClassName {
     className?: string;
   }
+
+  interface IconProps extends React.SVGProps<SVGSVGElement> {}
 }

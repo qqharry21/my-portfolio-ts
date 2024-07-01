@@ -15,3 +15,15 @@ export interface IRoute {
   name: string;
   href: string;
 }
+
+export interface Project {
+  id: string;
+  name: string;
+  description: string;
+  imageUrl: string;
+  skills: string[];
+  startDate: string;
+  endDate: string | null;
+  github?: string;
+  website?: string;
+}

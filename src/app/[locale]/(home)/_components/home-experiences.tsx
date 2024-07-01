@@ -28,11 +28,11 @@ export const HomeExperiences = () => {
     return {
       ...experience,
       id: key,
-      companyName: t(`${key}.company.name`),
-      href: t(`${key}.company.href`),
-      alt: t(`${key}.company.name`) + ' logo',
-      jobTitle: t(`${key}.job_title`),
-      description: t(`${key}.description`),
+      companyName: t(`companies.${key}.company.name`),
+      href: t(`companies.${key}.company.href`),
+      alt: t(`companies.${key}.company.name`) + ' logo',
+      jobTitle: t(`companies.${key}.job_title`),
+      description: t(`companies.${key}.description`),
       startDate: format.dateTime(new Date(experience.startDate), 'short'),
       endDate: experience.endDate && format.dateTime(new Date(experience.endDate), 'short'),
     };
@@ -40,12 +40,12 @@ export const HomeExperiences = () => {
 
   return (
     <div className='relative pt-32 md:pt-60'>
-      <div className='container flex max-w-4xl flex-col items-center justify-center gap-8 md:gap-16 xl:max-w-6xl'>
+      <div className='container flex max-w-4xl flex-col items-center justify-center gap-16 md:gap-24 xl:max-w-6xl'>
         <h2
-          className='text-6xl'
+          className='text-balance text-center text-5xl tracking-wide'
           id='experience'
         >
-          Work Experience
+          {t('title')}
         </h2>
         <div className='flow-root'>
           <ExperienceList experiences={experiences} />

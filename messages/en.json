@@ -11,25 +11,48 @@
     "contact": "Contact"
   },
   "work_experience": {
-    "1": {
-      "company": {
-        "name": "Wits",
-        "href": "https://www.wits.com/tw"
+    "title": "Work Experience",
+    "companies": {
+      "1": {
+        "company": {
+          "name": "Wits",
+          "href": "https://www.wits.com/tw"
+        },
+        "job_title": "Frontend Developer",
+        "description": "Independently developed an Overwolf application that automatically recognizes and records gaming highlights, allowing users to easily share clips on social media platforms. I uses React, Redux, Tailwind CSS and TypeScript technology to develop this application. The application has been downloaded over 4,000 times and has more than 250 daily active users at its peak. The client is currently planning to pre-install this app on their own PC devices and integrate it with more related applications."
       },
-      "job_title": "Frontend Developer",
-      "description": "Independently developed an Overwolf application that automatically recognizes and records gaming highlights, allowing users to easily share clips on social media platforms. I uses React, Redux, Tailwind CSS and TypeScript technology to develop this application. The application has been downloaded over 4,000 times and has more than 250 daily active users at its peak. The client is currently planning to pre-install this app on their own PC devices and integrate it with more related applications."
-    },
-    "2": {
-      "company": {
-        "name": "MiTAC",
-        "href": "https://www.mitac.com/"
+      "2": {
+        "company": {
+          "name": "MiTAC",
+          "href": "https://www.mitac.com/"
+        },
+        "job_title": "Software Engineer / Intern",
+        "description": "Developed backend functionalities for a Foreign Exchange System using Java, Spring MVC, and MySQL. Additionally, I was involved in automated testing and stress testing using Apache JMeter. I also participated in the optimization of the bank background system and used related technologies such as JSP, AJAX, JQuery, and Java."
+      }
+    }
+  },
+  "side_projects": {
+    "title": "Check out what I'm working on",
+    "subtitle": "Side Projects",
+    "description": "I love to work on side projects in my free time, from simple websites to complex web applications. Here are some of the projects I've worked on.",
+    "projects": {
+      "1": {
+        "name": "Personal Website",
+        "description": "This is a personal website where users can learn about my background, skills, and project experiences, and contact me directly through the site."
       },
-      "job_title": "Software Engineer / Intern",
-      "description": "Developed backend functionalities for a Foreign Exchange System using Java, Spring MVC, and MySQL. Additionally, I was involved in automated testing and stress testing using Apache JMeter. I also participated in the optimization of the bank background system and used related technologies such as JSP, AJAX, JQuery, and Java."
+      "2": {
+        "name": "Omdia Conference Website",
+        "description": "This is a website created for the Omdia conference, where users can easily access event details, session schedules, content, and speaker information, as well as register for the event."
+      },
+      "3": {
+        "name": "CMS System",
+        "description": "Developed a Content Management System (CMS) for a client using Next.js, and MongoDB. The system allows the client to manage and update content on their website easily."
+      }
     }
   },
   "common": {
     "present": "Present",
-    "read_more": "Read More"
+    "read_more": "Read More",
+    "website": "Website"
   }
 }
