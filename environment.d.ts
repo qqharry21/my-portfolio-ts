@@ -5,5 +5,6 @@ declare namespace NodeJS {
     readonly NEXT_PUBLIC_MEASUREMENT_ID: string;
     readonly NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID: string;
     readonly RESEND_API_KEY: string;
+    readonly MONGODB_URI: string;
   }
 }
