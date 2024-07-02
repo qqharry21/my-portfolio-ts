@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 
+import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { PreLoader } from '@/components/pre-loader';
 
@@ -44,6 +45,7 @@ export default async function LocaleLayout({
             <PreLoader />
             <Header />
             {children}
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>
