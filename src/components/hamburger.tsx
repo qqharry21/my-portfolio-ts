@@ -38,11 +38,11 @@ export const Hamburger = ({
     <Magnetic ref={targetEl}>
       <m.div
         ref={targetEl}
-        className='fixed right-4 top-4 z-10 md:right-8 md:top-8'
+        className='fixed right-4 top-4 z-[15] md:right-8 md:top-8'
         initial={{ scale: 0 }}
       >
         <button
-          className='group flex size-16 items-center justify-center rounded-full bg-primary shadow-md hover:shadow-lg focus-visible:shadow-lg focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-secondary md:size-20'
+          className='group flex size-16 items-center justify-center rounded-full bg-secondary shadow-md hover:shadow-lg focus-visible:shadow-lg focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-secondary md:size-20'
           data-active={isOpen}
           onClick={() => setOpen(!isOpen)}
         >
