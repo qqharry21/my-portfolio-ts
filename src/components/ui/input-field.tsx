@@ -30,10 +30,11 @@ export const InputField = <
             <input
               type='text'
               className='peer relative block w-full appearance-none border-b-2 border-primary-foreground/80 bg-transparent px-0 py-2.5 text-sm transition-colors duration-300 focus:border-primary-foreground focus:outline-none focus:ring-0'
+              placeholder=' '
               {...field}
             />
           </FormControl>
-          <FormLabel className='absolute top-0 -z-10 origin-[0] text-sm text-current transition-transform duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75'>
+          <FormLabel className='absolute top-0 -z-10 origin-[0] -translate-y-6 scale-75 text-sm text-current transition-transform duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75'>
             {label}
           </FormLabel>
         </FormItem>

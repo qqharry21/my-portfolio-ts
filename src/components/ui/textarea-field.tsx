@@ -30,6 +30,7 @@ export const TextareaField = <
           <FormControl>
             <Textarea
               className='peer relative block min-h-0 w-full appearance-none rounded-none border-0 border-b-2 border-primary-foreground/80 bg-transparent px-0 py-2.5 text-sm transition-colors duration-300 focus:border-primary-foreground focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0'
+              placeholder=' '
               {...field}
             />
           </FormControl>
