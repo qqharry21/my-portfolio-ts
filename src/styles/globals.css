@@ -88,6 +88,14 @@ html.lenis body {
   pointer-events: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -137,5 +145,13 @@ html.lenis body {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary;
+  }
+}
+
+@layer utilities {
+  .auto-grid {
+    --min-col-size: 15rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col-size), 100%), 1fr));
   }
 }
