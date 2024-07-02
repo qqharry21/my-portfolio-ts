@@ -3,18 +3,16 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ArrowRightIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import type { z } from 'zod';
+
+import { contactSchema } from '@/lib/schemas';
 
 import { Button } from './ui/button';
 import { Form } from './ui/form';
 import { InputField } from './ui/input-field';
 import { TextareaField } from './ui/textarea-field';
 
-const contactSchema = z.object({
-  name: z.string().min(1),
-  email: z.string().email(),
-  message: z.string().min(1),
-});
+type ContactFormValues = z.infer<typeof contactSchema>;
 
 export const ContactForm = () => {
   const form = useForm({
@@ -26,9 +24,25 @@ export const ContactForm = () => {
     },
   });
 
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      const result = await fetch('/api/send-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      if (!result.ok) {
+        throw new Error('Failed to send message');
+      }
+      form.reset();
+    } catch (error) {}
+  };
+
   return (
     <Form {...form}>
-      <form>
+      <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
           <InputField
             name='name'
