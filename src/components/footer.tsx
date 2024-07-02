@@ -1,14 +1,14 @@
-import { ContactLink } from './header/contact-link';
-import { GithubIcon } from './icons/github-icon';
-import { LinkedinIcon } from './icons/linkedin-icon';
+import { ContactLink } from './contact-link';
+import { GithubIcon, LinkedinIcon } from './icons';
 
 export const Footer = () => {
   return (
-    <footer className='container py-8 md:py-12'>
-      <div className='flex flex-col items-center justify-center gap-4'>
+    <footer className='bg-primary py-8 text-primary-foreground md:py-12'>
+      <div className='container flex flex-col items-center justify-center gap-4'>
         <ul className='flex flex-wrap items-center justify-center gap-4'>
           <li>
             <ContactLink
+              theme='light'
               href='https://github.com/qqharry21'
               target='_blank'
               rel='noreferrer noopener'
@@ -18,6 +18,7 @@ export const Footer = () => {
           </li>
           <li>
             <ContactLink
+              theme='light'
               href='https://www.linkedin.com/in/harry-chen-21/'
               target='_blank'
               rel='noreferrer noopener'

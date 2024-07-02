@@ -10,12 +10,11 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 
 import type { IRoute } from '@/lib/types';
 
+import { ContactLink } from '../contact-link';
 import { Hamburger } from '../hamburger';
 import { GithubIcon } from '../icons/github-icon';
 import LocaleSwitcher from '../locale-switcher';
 import { NavigationLink } from '../navigation-link';
-
-import { ContactLink } from './contact-link';
 
 const MotionLink = m(NavigationLink);
 
