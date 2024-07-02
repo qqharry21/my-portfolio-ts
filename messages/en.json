@@ -12,6 +12,7 @@
   },
   "work_experience": {
     "title": "Work Experience",
+    "description": "Here are some of the companies I've worked for and the projects I've worked on.",
     "companies": {
       "1": {
         "company": {
@@ -34,7 +35,7 @@
   "side_projects": {
     "title": "Check out what I'm working on",
     "subtitle": "Side Projects",
-    "description": "I love to work on side projects in my free time, from simple websites to complex web applications. Here are some of the projects I've worked on.",
+    "description": "I love to work on side projects in my free time, from simple websites to complex web applications. Here are some of the projects I've worked recently.",
     "projects": {
       "1": {
         "name": "Personal Website",

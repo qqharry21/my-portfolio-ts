@@ -68,7 +68,7 @@ export const ExperienceItem = ({
               <div className='inline-flex items-center gap-x-2'>
                 <Link
                   href={experience.externalLink}
-                  className='text-primary underline underline-offset-4'
+                  className='text-primary underline underline-offset-2'
                   prefetch={false}
                   target='_blank'
                   rel='noreferrer noopener'

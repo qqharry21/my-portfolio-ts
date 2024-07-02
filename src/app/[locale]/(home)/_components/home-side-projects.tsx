@@ -54,7 +54,7 @@ export const HomeSideProjects = () => {
             >
               {t('title')}
             </h2>
-            <p className='mt-2 max-w-5xl text-center text-base max-md:text-balance'>
+            <p className='mt-2 max-w-4xl text-center text-lg max-md:text-balance'>
               {t('description')}
             </p>
           </div>

@@ -19,7 +19,7 @@ export const HomeAboutSection = () => {
             I&apos;m graduated from the{' '}
             <Link
               href='http://www.csie.tku.edu.tw'
-              className='underline underline-offset-4'
+              className='underline underline-offset-2'
               prefetch={false}
               target='_blank'
               rel='noreferrer noopener '

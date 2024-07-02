@@ -41,12 +41,15 @@ export const HomeExperiences = () => {
   return (
     <div className='relative pt-32 md:pt-60'>
       <div className='container flex max-w-4xl flex-col items-center justify-center gap-16 md:gap-24 xl:max-w-6xl'>
-        <h2
-          className='text-balance text-center text-5xl tracking-wide'
-          id='experience'
-        >
-          {t('title')}
-        </h2>
+        <div className='space-y-2'>
+          <h2
+            className='text-balance text-center text-6xl tracking-wide'
+            id='experience'
+          >
+            {t('title')}
+          </h2>
+          <p className='text-balance text-lg'>{t('description')}</p>
+        </div>
         <div className='flow-root'>
           <ExperienceList experiences={experiences} />
         </div>

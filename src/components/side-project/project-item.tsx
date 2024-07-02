@@ -33,7 +33,6 @@ export const ProjectItem = ({ project }: { project: Project }) => {
           {project.skills.map((skill) => (
             <Badge
               key={skill}
-              className='capitalize'
               variant='destructive'
             >
               {skill}
