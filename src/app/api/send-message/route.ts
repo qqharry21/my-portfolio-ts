@@ -54,6 +54,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: 'Send message successful' }, { status: 200 });
   } catch (error) {
+    console.log('🚨 - error', error);
     await session.abortTransaction();
     return new NextResponse('Failed to send message', { status: 500 });
   } finally {
