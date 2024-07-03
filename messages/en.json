@@ -1,7 +1,9 @@
 {
   "personal_info": {
     "name": "Harry Chen",
-    "job_title": "Frontend Developer"
+    "job_title": "Frontend Developer",
+    "current_company": "Wits",
+    "current_company_href": "https://www.wits.com/en"
   },
   "nav": {
     "home": "Home",
@@ -10,6 +12,16 @@
     "side_projects": "Side Projects",
     "contact": "Contact"
   },
+  "banner": {
+    "greeting": "Hello, It's me",
+    "introduction": "I love to build things and learn new stuff and always looking for opportunities to improve my skills. Currently working at <company></company>.",
+    "resume_button": "My Resume",
+    "slogan": "Open to work!!!!"
+  },
+  "about": {
+    "content": "I graduated from <school>Tamkang University</school> with a bachelor's degree in Computer Science and Information Engineering. I am proficient in frontend technologies and have extensive experience in backend development. I can quickly understand and resolve problems encountered in projects.\n\nIn my spare time, I enjoy hanging out with friends, shopping, and playing basketball. These activities not only keep me active but also spark my creativity, bringing fresh perspectives to my work.\n\nI have solid technical skills and a passion for learning new things, along with a strong enthusiasm for teamwork. Additionally, I excel in communication, effective collaboration, and maintaining calm and efficiency under pressure. I believe these qualities enable me to iterate quickly and make valuable contributions to your company, helping the team achieve higher goals.",
+    "school_href": "http://www.csie.tku.edu.tw/Main.aspx?lang=en"
+  },
   "work_experience": {
     "title": "Work Experience",
     "description": "Here are some of the companies I've worked for and the projects I've worked on.",
@@ -17,7 +29,7 @@
       "1": {
         "company": {
           "name": "Wits",
-          "href": "https://www.wits.com/tw"
+          "href": "https://www.wits.com/en"
         },
         "job_title": "Frontend Developer",
         "description": "Independently developed an Overwolf application that automatically recognizes and records gaming highlights, allowing users to easily share clips on social media platforms. I uses React, Redux, Tailwind CSS and TypeScript technology to develop this application. The application has been downloaded over 4,000 times and has more than 250 daily active users at its peak. The client is currently planning to pre-install this app on their own PC devices and integrate it with more related applications."
@@ -25,7 +37,7 @@
       "2": {
         "company": {
           "name": "MiTAC",
-          "href": "https://www.mitac.com/"
+          "href": "https://www.mitac.com/en-global"
         },
         "job_title": "Software Engineer / Intern",
         "description": "Developed backend functionalities for a Foreign Exchange System using Java, Spring MVC, and MySQL. Additionally, I was involved in automated testing and stress testing using Apache JMeter. I also participated in the optimization of the bank background system and used related technologies such as JSP, AJAX, JQuery, and Java."

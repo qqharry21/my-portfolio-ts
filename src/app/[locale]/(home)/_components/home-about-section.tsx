@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
+import { useTranslations } from 'next-intl';
+
 export const HomeAboutSection = () => {
+  const t = useTranslations('about');
+
   return (
     <div className='relative pt-32 md:pt-60'>
       <div className='container flex max-w-lg flex-col items-center justify-center gap-8 md:max-w-4xl md:gap-16 xl:max-w-7xl'>
@@ -16,24 +20,19 @@ export const HomeAboutSection = () => {
             </div>
           </div>
           <div className='flex-1 whitespace-pre-wrap text-left text-lg max-md:text-balance md:max-w-xl xl:max-w-2xl'>
-            I&apos;m graduated from the{' '}
-            <Link
-              href='http://www.csie.tku.edu.tw'
-              className='underline underline-offset-2'
-              prefetch={false}
-              target='_blank'
-              rel='noreferrer noopener '
-            >
-              Tamkang University
-            </Link>{' '}
-            with a bachelor&apos;s degree in Computer Science and Information Engineering. <br />
-            <br />I am not only proficient in frontend technologies but also have experience in
-            backend development. I can quickly understand and solve problems encountered in
-            projects. <br />
-            <br />
-            And also have strong interest in new technologies and tools, which allows me to rapidly
-            iterate and apply them to company projects. I remain calm and efficient even in
-            high-pressure environments.
+            {t.rich('content', {
+              school: (chuck) => (
+                <Link
+                  href={t('school_href')}
+                  className='underline underline-offset-2'
+                  prefetch={false}
+                  target='_blank'
+                  rel='noreferrer noopener '
+                >
+                  {chuck}
+                </Link>
+              ),
+            })}
           </div>
         </div>
       </div>
