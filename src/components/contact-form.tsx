@@ -1,20 +1,29 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { ArrowRightIcon } from 'lucide-react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod';
 
-import { contactSchema } from '@/lib/schemas';
+import { useTranslations } from 'next-intl';
 
-import { Button } from './ui/button';
+import { useI18nZodErrors } from '@/hooks/use-i18n-zod-errors';
+
+import { contactSchema } from '@/lib/schemas';
+import type { SubmitStatus } from '@/lib/types';
+
 import { Form } from './ui/form';
 import { InputField } from './ui/input-field';
+import { SubmitButton } from './ui/submit-button';
 import { TextareaField } from './ui/textarea-field';
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 export const ContactForm = () => {
+  useI18nZodErrors();
+  const t = useTranslations();
+
+  const [status, setStatus] = useState<SubmitStatus>('pending');
   const form = useForm({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -26,6 +35,8 @@ export const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
+      setStatus('loading');
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       const result = await fetch('/api/send-message', {
         method: 'POST',
         headers: {
@@ -36,8 +47,13 @@ export const ContactForm = () => {
       if (!result.ok) {
         throw new Error('Failed to send message');
       }
+      setStatus('success');
       form.reset();
-    } catch (error) {}
+    } catch (error) {
+      setStatus('error');
+    } finally {
+      setTimeout(() => setStatus('pending'), 3000);
+    }
   };
 
   return (
@@ -47,34 +63,36 @@ export const ContactForm = () => {
           <InputField
             name='name'
             control={form.control}
-            label='Your Name'
+            label={t('form.name.label')}
             className='col-span-1'
           />
           <InputField
             name='email'
             control={form.control}
-            label='Email'
+            label={t('form.email.label')}
             className='col-span-1'
           />
           <TextareaField
             name='message'
             control={form.control}
-            label='Message'
+            label={t('form.message.label')}
             className='md:col-span-2'
           />
         </div>
         <div className='mt-8 flex items-center justify-end'>
-          <Button
-            type='submit'
+          <SubmitButton
             variant='destructive'
+            className='min-w-72'
+            status={status}
+            disabled={status !== 'pending'}
             size='lg'
-          >
-            Send Message
-            <ArrowRightIcon
-              size={16}
-              className='ml-4'
-            />
-          </Button>
+            texts={{
+              pending: t('contact.submit.pending'),
+              loading: t('contact.submit.loading'),
+              success: t('contact.submit.success'),
+              error: t('contact.submit.error'),
+            }}
+          />
         </div>
       </form>
     </Form>
