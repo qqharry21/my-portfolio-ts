@@ -1,5 +1,7 @@
 import type * as LabelPrimitive from '@radix-ui/react-label';
 import { Slot } from '@radix-ui/react-slot';
+import type { HTMLMotionProps } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 import * as React from 'react';
 import type { ControllerProps, FieldPath, FieldValues } from 'react-hook-form';
 import { Controller, FormProvider, useFormContext } from 'react-hook-form';
@@ -130,28 +132,31 @@ const FormDescription = React.forwardRef<
 });
 FormDescription.displayName = 'FormDescription';
 
-const FormMessage = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, children, ...props }, ref) => {
-  const { error, formMessageId } = useFormField();
-  const body = error ? String(error?.message) : children;
+const FormMessage = React.forwardRef<HTMLParagraphElement, HTMLMotionProps<'p'>>(
+  ({ className, children, ...props }, ref) => {
+    const { error, formMessageId } = useFormField();
+    const body = error ? String(error?.message) : children;
 
-  if (!body) {
-    return null;
+    return (
+      <AnimatePresence mode='wait'>
+        {body && (
+          <m.p
+            ref={ref}
+            id={formMessageId}
+            initial={{ opacity: 0, translateY: -10 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            exit={{ opacity: 0, translateY: 10 }}
+            transition={{ duration: 0.3, ease: [0.76, 0, 0.24, 1] }}
+            className={cn('text-sm font-medium text-error', className)}
+            {...props}
+          >
+            {body}
+          </m.p>
+        )}
+      </AnimatePresence>
+    );
   }
-
-  return (
-    <p
-      ref={ref}
-      id={formMessageId}
-      className={cn('text-sm font-medium text-destructive', className)}
-      {...props}
-    >
-      {body}
-    </p>
-  );
-});
+);
 FormMessage.displayName = 'FormMessage';
 
 export {
