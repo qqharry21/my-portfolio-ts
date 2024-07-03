@@ -4,7 +4,6 @@ const withNextIntl = createNextIntlPlugin('./src/lib/i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  headers: {},
   images: {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 30 * 24 * 60 * 60,
