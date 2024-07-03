@@ -24,6 +24,10 @@ const nextConfig = {
         hostname: 'www.mitac.com.tw',
         pathname: '/wp-content/uploads/2021/12/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.chenchuanhao.com',
+      },
     ],
   },
 };
