@@ -72,7 +72,7 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
         {open && (
           <>
             <m.div
-              className='fixed right-0 top-0 z-10 h-screen bg-muted px-14 py-24 max-2xs:w-full md:p-24'
+              className='fixed right-0 top-0 z-10 h-screen bg-muted px-14 py-24 max-2xs:w-full lg:p-24'
               initial='hidden'
               animate='show'
               exit='exit'
@@ -85,7 +85,7 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
                       key={route.name}
                       href={route.href}
                       data-active={route.href === `/${segment}`}
-                      className='relative text-left text-4xl before:absolute before:-left-6 before:top-half before:size-2 before:-translate-y-half before:scale-0 before:rounded-full before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:content-none hover:text-primary/80 hover:before:scale-100 focus-visible:before:scale-100 data-[active=true]:before:scale-100'
+                      className='relative text-center text-4xl before:absolute before:-left-6 before:top-half before:size-2 before:-translate-y-half before:scale-0 before:rounded-full before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:content-none hover:text-primary/80 hover:before:scale-100 focus-visible:before:scale-100 data-[active=true]:before:scale-100 2xs:text-left'
                       variants={routeVariants}
                       onClick={() => onClick(route.href)}
                     >
@@ -93,9 +93,9 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
                     </MotionLink>
                   ))}
                 </div>
-                <div className='space-y-8'>
+                <div className='space-y-8 max-2xs:text-center'>
                   <LocaleSwitcher />
-                  <div className='flex items-center gap-x-8'>
+                  <div className='flex items-center gap-x-8 max-2xs:justify-center'>
                     <ContactLink href='mailto:qqharry21@gmail.com'>
                       <MailIcon />
                     </ContactLink>

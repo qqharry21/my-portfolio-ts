@@ -12,7 +12,7 @@ export const ProjectItem = ({ project }: { project: Project }) => {
   const t = useTranslations('common');
   return (
     <div className='w-full overflow-hidden rounded-md border border-solid border-primary shadow-sm'>
-      <div className='relative h-48 w-full overflow-hidden md:h-72'>
+      <div className='relative h-48 w-full overflow-hidden sm:h-60 md:h-72'>
         <BlurImage
           src={project.imageUrl}
           alt={project.name}

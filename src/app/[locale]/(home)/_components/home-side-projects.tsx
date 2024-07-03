@@ -42,8 +42,8 @@ export const HomeSideProjects = () => {
 
   return (
     <ScrollListenerContainerProvider>
-      <div className='relative z-1 pt-32 md:pt-60'>
-        <div className='container flex flex-col items-center gap-16 md:gap-24'>
+      <div className='relative z-1 pt-32 lg:pt-60'>
+        <div className='container flex flex-col items-center gap-16 lg:gap-24'>
           <div className='flex flex-col items-center justify-center'>
             <div>
               <Badge className='text-sm'>{t('subtitle')}</Badge>
@@ -54,7 +54,7 @@ export const HomeSideProjects = () => {
             >
               {t('title')}
             </h2>
-            <p className='mt-2 max-w-4xl text-center text-lg max-md:text-balance'>
+            <p className='mt-2 max-w-4xl text-center text-lg max-lg:text-balance'>
               {t('description')}
             </p>
           </div>
@@ -62,7 +62,7 @@ export const HomeSideProjects = () => {
             <ProjectList projects={projects} />
           </div>
         </div>
-        <BottomCircle className='mt-32 bg-background md:mt-60' />
+        <BottomCircle className='mt-32 bg-background lg:mt-60' />
       </div>
     </ScrollListenerContainerProvider>
   );

@@ -79,10 +79,10 @@ export const ContactForm = () => {
             className='md:col-span-2'
           />
         </div>
-        <div className='mt-8 flex items-center justify-end'>
+        <div className='mt-8 flex w-full items-center justify-center sm:justify-end'>
           <SubmitButton
             variant='destructive'
-            className='min-w-72'
+            className='min-w-72 max-sm:w-full'
             status={status}
             disabled={status !== 'pending'}
             size='lg'
