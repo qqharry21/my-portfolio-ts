@@ -43,8 +43,9 @@ export const Header = () => {
           <Image
             src={Logo}
             alt='logo'
-            className='object-contain object-center'
+            className='h-auto w-full object-contain object-center'
             priority
+            fill
           />
         </Link>
 

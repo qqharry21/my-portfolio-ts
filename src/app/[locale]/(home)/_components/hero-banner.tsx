@@ -1,8 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import Me from '@/public/assets/me.webp';
 
+import { BlurImage } from '@/components/blur-image';
 import { Button } from '@/components/ui/button';
 
 export const HeroBanner = () => {
@@ -46,11 +46,14 @@ export const HeroBanner = () => {
         </div>
         <div className='relative'>
           <div className='relative size-60 shrink-0 overflow-hidden rounded-full ring-4 ring-white ring-offset-4 ring-offset-secondary sm:size-80 md:size-100'>
-            <Image
+            <BlurImage
               src={Me}
               alt='Me - Harry Chen'
-              className='h-full object-cover object-top brightness-90'
+              className='h-auto w-full object-cover object-top brightness-90'
+              fill
               priority
+              sizes='(min-width: 780px) 400px, (min-width: 640px) 320px, 240px'
+              overrideSrc='/harry-chen.webp'
             />
           </div>
           <div className='absolute -right-4 bottom-4 md:right-0'>

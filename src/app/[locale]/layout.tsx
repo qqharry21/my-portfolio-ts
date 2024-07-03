@@ -24,7 +24,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
     },
     description: 'A personal portfolio website built with Next.js and Tailwind CSS.',
     icons: {
-      icon: './assets/logo.png',
+      icon: './assets/logo.webp',
     },
   };
 };

@@ -19,6 +19,7 @@ export const ProjectItem = ({ project }: { project: Project }) => {
           fill
           className='h-auto w-full object-cover object-center hover:scale-105'
           loading='lazy'
+          sizes='(min-width: 1320px) 558px, (min-width: 1060px) calc(32.5vw + 136px), calc(100vw - 66px)'
         />
       </div>
       <div className='p-4'>

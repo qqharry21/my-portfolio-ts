@@ -34,6 +34,7 @@ export const ExperienceItem = ({
               width={48}
               height={48}
               loading='lazy'
+              sizes='(min-width: 780px) 48px, 40px'
             />
           </div>
           <div className='min-w-0 flex-1 space-y-2'>
