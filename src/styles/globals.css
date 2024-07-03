@@ -28,6 +28,12 @@
     --destructive: 210 26% 68%; /* #9DB2BF */
     --destructive-foreground: 210 32% 23%; /* #27374D */
 
+    --success: 120 50% 40%; /* #339933 */
+    --success-foreground: 210 52% 90%; /* #DDE6ED */
+
+    --error: 0 70% 50%; /* #d92626 */
+    --error-foreground: 210 52% 90%; /* #DDE6ED */
+
     --border: 210 52% 90%; /* #DDE6ED */
     --input: 210 52% 90%; /* #DDE6ED */
     --ring: 210 32% 23%; /* #27374D */
@@ -60,6 +66,12 @@
 
     --destructive: 0 84% 60%; /* Red (example destructive color) */
     --destructive-foreground: 210 52% 90%; /* #DDE6ED */
+
+    --success: 120 50% 40%; /* #339933 */
+    --success-foreground: 210 52% 90%; /* #DDE6ED */
+
+    --error: 0 70% 50%; /* #d92626 */
+    --error-foreground: 210 52% 90%; /* #DDE6ED */
 
     --border: 210 27% 42%; /* #526D82 */
     --input: 210 27% 42%; /* #526D82 */
