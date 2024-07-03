@@ -7,8 +7,6 @@ import type { z } from 'zod';
 
 import { useTranslations } from 'next-intl';
 
-import { useI18nZodErrors } from '@/hooks/use-i18n-zod-errors';
-
 import { contactSchema } from '@/lib/schemas';
 import type { SubmitStatus } from '@/lib/types';
 
@@ -20,7 +18,6 @@ import { TextareaField } from './ui/textarea-field';
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 export const ContactForm = () => {
-  useI18nZodErrors();
   const t = useTranslations();
 
   const [status, setStatus] = useState<SubmitStatus>('pending');
