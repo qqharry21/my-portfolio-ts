@@ -51,6 +51,27 @@
       }
     }
   },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "My inbox is always open. so feel free to send a message to me and I will get back to you as soon as possible.",
+    "submit": {
+      "pending": "Send Message",
+      "loading": "Sending...",
+      "success": "Message Sent",
+      "error": "Failed to send message"
+    }
+  },
+  "form": {
+    "name": {
+      "label": "Your Name"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "message": {
+      "label": "Message"
+    }
+  },
   "common": {
     "present": "Present",
     "read_more": "Read More",

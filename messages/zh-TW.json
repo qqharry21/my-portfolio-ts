@@ -12,6 +12,7 @@
   },
   "work_experience": {
     "title": "工作經歷",
+    "description": "以下是我曾經工作過的公司和參與過的專案",
     "companies": {
       "1": {
         "company": {
@@ -44,6 +45,27 @@
         "name": "Omdia 研討會網站",
         "description": "這是一個為 Omdia 研討會製作的網站，用戶可以輕鬆獲取會議資訊、演講流程、內容和講師資訊，並進行報名。"
       }
+    }
+  },
+  "contact": {
+    "title": "聯絡我",
+    "description": "我的收件箱一直是開放的，所以隨時歡迎發送消息給我，我會盡快回覆您。",
+    "submit": {
+      "pending": "發送",
+      "loading": "發送中...",
+      "success": "已送達",
+      "error": "發送失敗"
+    }
+  },
+  "form": {
+    "name": {
+      "label": "您的姓名"
+    },
+    "email": {
+      "label": "聯絡信箱"
+    },
+    "message": {
+      "label": "想對我說的話"
     }
   },
   "common": {

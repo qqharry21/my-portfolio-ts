@@ -1,3 +1,5 @@
+export type SubmitStatus = 'pending' | 'loading' | 'success' | 'error';
+
 export interface Experience {
   id: string;
   companyName: string;

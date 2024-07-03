@@ -11,7 +11,7 @@
     "source.organizeImports": "explicit",
     "source.fixAll": "explicit"
   },
-  "i18n-ally.localesPaths": ["messages"],
+  "i18n-ally.localesPaths": ["messages", "messages/zod"],
   "i18n-ally.sourceLanguage": "en",
   "i18n-ally.keystyle": "nested"
 }

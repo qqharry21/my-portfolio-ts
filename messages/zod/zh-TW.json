@@ -1,0 +1,133 @@
+{
+  "zod": {
+    "errors": {
+      "required": "必填",
+      "invalid_type": "預期 {expected}，收到 {received}",
+      "invalid_type_received_undefined": "必填",
+      "invalid_literal": "無效的字面值，預期 {expected}",
+      "unrecognized_keys": "物件中無法識別的鍵：{keys}",
+      "invalid_union": "無效的輸入",
+      "invalid_union_discriminator": "無效的區別器值。預期 {options}",
+      "invalid_enum_value": "無效的枚舉值。預期 {options}，收到 {received}",
+      "invalid_arguments": "無效的函數參數",
+      "invalid_return_type": "無效的函數返回類型",
+      "invalid_date": "無效的日期",
+      "custom": "無效的輸入",
+      "invalid_intersection_types": "交集結果無法合併",
+      "not_multiple_of": "數字須是 {multipleOf} 的倍數",
+      "not_finite": "數字須是有限的",
+      "invalid_string": {
+        "email": "無效的 {validation}",
+        "emoji": "無效的 {validation}",
+        "url": "無效的 {validation}",
+        "uuid": "無效的 {validation}",
+        "ulid": "無效的 {validation}",
+        "ip": "無效的 {validation}",
+        "cuid": "無效的 {validation}",
+        "cuid2": "無效的 {validation}",
+        "regex": "無效的格式",
+        "datetime": "無效的 {validation}",
+        "startsWith": "無效的輸入：須以 \"{startsWith}\" 開始",
+        "endsWith": "無效的輸入：須以 \"{endsWith}\" 結束"
+      },
+      "too_small": {
+        "array": {
+          "exact": "{path, select, missingTranslation {陣列} other {{path}}} 須包含確切的 {minimum} 個元素",
+          "inclusive": "{path, select, missingTranslation {陣列} other {{path}}} 須至少包含 {minimum} 個元素",
+          "not_inclusive": "{path, select, missingTranslation {陣列} other {{path}}} 須包含超過 {minimum} 個元素"
+        },
+        "string": {
+          "exact": "{path, select, missingTranslation {字串} other {{path}}} 須包含確切的 {minimum} 個字元",
+          "inclusive": "{path, select, missingTranslation {字串} other {{path}}} 須至少包含 {minimum} 個字元",
+          "not_inclusive": "{path, select, missingTranslation {字串} other {{path}}} 須包含超過 {minimum} 個字元"
+        },
+        "number": {
+          "exact": "{path, select, missingTranslation {數字} other {{path}}} 須確切為 {minimum}",
+          "inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須大於或等於 {minimum}",
+          "not_inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須大於 {minimum}"
+        },
+        "bigint": {
+          "exact": "{path, select, missingTranslation {數字} other {{path}}} 須確切為 {minimum}",
+          "inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須大於或等於 {minimum}",
+          "not_inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須大於 {minimum}"
+        },
+        "set": {
+          "exact": "無效的輸入",
+          "inclusive": "無效的輸入",
+          "not_inclusive": "無效的輸入"
+        },
+        "date": {
+          "exact": "日期須確切為 {minimum, date, short}",
+          "inclusive": "日期須大於或等於 {minimum, date, short}",
+          "not_inclusive": "日期須大於 {minimum, date, short}"
+        }
+      },
+      "too_big": {
+        "array": {
+          "exact": "{path, select, missingTranslation {陣列} other {{path}}} 須包含確切的 {maximum} 個元素",
+          "inclusive": "{path, select, missingTranslation {陣列} other {{path}}} 須最多包含 {maximum} 個元素",
+          "not_inclusive": "{path, select, missingTranslation {陣列} other {{path}}} 須包含少於 {maximum} 個元素"
+        },
+        "string": {
+          "exact": "{path, select, missingTranslation {字串} other {{path}}} 須包含確切的 {maximum} 個字元",
+          "inclusive": "{path, select, missingTranslation {字串} other {{path}}} 須最多包含 {maximum} 個字元",
+          "not_inclusive": "{path, select, missingTranslation {字串} other {{path}}} 須包含少於 {maximum} 個字元"
+        },
+        "number": {
+          "exact": "{path, select, missingTranslation {數字} other {{path}}} 須確切為 {maximum}",
+          "inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須小於或等於 {maximum}",
+          "not_inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須小於 {maximum}"
+        },
+        "bigint": {
+          "exact": "{path, select, missingTranslation {數字} other {{path}}} 須確切為 {maximum}",
+          "inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須小於或等於 {maximum}",
+          "not_inclusive": "{path, select, missingTranslation {數字} other {{path}}} 須小於 {maximum}"
+        },
+        "set": {
+          "exact": "無效的輸入",
+          "inclusive": "無效的輸入",
+          "not_inclusive": "無效的輸入"
+        },
+        "date": {
+          "exact": "日期須確切為 {maximum, date, short}",
+          "inclusive": "日期須小於或等於 {maximum, date, short}",
+          "not_inclusive": "日期須小於 {maximum, date, short}"
+        }
+      }
+    },
+    "validations": {
+      "email": "電子郵件",
+      "emoji": "表情符號",
+      "url": "網址",
+      "uuid": "uuid",
+      "ulid": "ulid",
+      "ip": "ip",
+      "cuid": "cuid",
+      "cuid2": "cuid2",
+      "regex": "正則表達式",
+      "datetime": "日期時間"
+    },
+    "types": {
+      "function": "函數",
+      "number": "數字",
+      "string": "字串",
+      "nan": "非數字",
+      "integer": "整數",
+      "float": "浮點數",
+      "boolean": "布林值",
+      "date": "日期",
+      "bigint": "大整數",
+      "undefined": "未定義",
+      "symbol": "符號",
+      "null": "空值",
+      "array": "陣列",
+      "object": "物件",
+      "unknown": "未知",
+      "promise": "承諾",
+      "void": "無效",
+      "never": "永不",
+      "map": "映射",
+      "set": "集合"
+    }
+  }
+}
