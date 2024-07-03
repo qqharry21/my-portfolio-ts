@@ -43,15 +43,15 @@ export const HomeSideProjects = () => {
   return (
     <ScrollListenerContainerProvider>
       <div className='relative z-1 pt-32 lg:pt-60'>
-        <div className='container flex flex-col items-center gap-16 lg:gap-24'>
+        <div
+          className='container flex flex-col items-center gap-16 lg:gap-24'
+          id='side-projects'
+        >
           <div className='flex flex-col items-center justify-center'>
             <div>
               <Badge className='text-sm'>{t('subtitle')}</Badge>
             </div>
-            <h2
-              className='mt-4 text-balance text-center text-6xl leading-snug tracking-wide'
-              id='side-projects'
-            >
+            <h2 className='mt-4 text-balance text-center text-6xl leading-snug tracking-wide'>
               {t('title')}
             </h2>
             <p className='mt-2 max-w-4xl text-center text-lg max-lg:text-balance'>

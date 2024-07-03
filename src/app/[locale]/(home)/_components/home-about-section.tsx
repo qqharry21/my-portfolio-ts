@@ -7,7 +7,10 @@ export const HomeAboutSection = () => {
 
   return (
     <div className='relative pt-32 lg:pt-60'>
-      <div className='container max-w-3xl lg:max-w-4xl xl:max-w-6xl'>
+      <div
+        className='container max-w-3xl lg:max-w-4xl xl:max-w-6xl'
+        id='about'
+      >
         <h2 className='hidden'>About Me</h2>
         <div className='flex w-full items-start gap-16 max-lg:flex-col lg:justify-between lg:gap-x-24'>
           <div className='select-none whitespace-nowrap tracking-widest'>

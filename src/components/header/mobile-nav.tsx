@@ -46,7 +46,7 @@ const routeVariants: Variants = {
   exit: { x: 80, opacity: 0, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
 };
 
-const blurVariants: Variants = {
+const opacityVariants: Variants = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
   exit: { opacity: 0, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
@@ -85,7 +85,7 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
                       key={route.name}
                       href={route.href}
                       data-active={route.href === `/${segment}`}
-                      className='relative text-center text-4xl before:absolute before:-left-6 before:top-half before:size-2 before:-translate-y-half before:scale-0 before:rounded-full before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:content-none hover:text-primary/80 hover:before:scale-100 focus-visible:before:scale-100 data-[active=true]:before:scale-100 2xs:text-left'
+                      className='relative select-none text-center text-4xl before:absolute before:-left-6 before:top-half before:size-2 before:-translate-y-half before:scale-0 before:rounded-full before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:content-none hover:text-primary/80 hover:before:scale-100 focus-visible:before:scale-100 data-[active=true]:before:scale-100 2xs:text-left'
                       variants={routeVariants}
                       onClick={() => onClick(route.href)}
                     >
@@ -94,7 +94,9 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
                   ))}
                 </div>
                 <div className='space-y-8 max-2xs:text-center'>
-                  <LocaleSwitcher />
+                  <m.div variants={opacityVariants}>
+                    <LocaleSwitcher />
+                  </m.div>
                   <div className='flex items-center gap-x-8 max-2xs:justify-center'>
                     <ContactLink href='mailto:qqharry21@gmail.com'>
                       <MailIcon />
@@ -125,7 +127,7 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
               initial='hidden'
               animate='show'
               exit='exit'
-              variants={blurVariants}
+              variants={opacityVariants}
               onClick={() => setOpen(false)}
             />
           </>

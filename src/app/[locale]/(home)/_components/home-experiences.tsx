@@ -40,14 +40,12 @@ export const HomeExperiences = () => {
 
   return (
     <div className='relative pt-32 lg:pt-60'>
-      <div className='container flex max-w-4xl flex-col items-center justify-center gap-16 lg:gap-24 xl:max-w-6xl'>
+      <div
+        className='container flex max-w-4xl flex-col items-center justify-center gap-16 lg:gap-24 xl:max-w-6xl'
+        id='experience'
+      >
         <div className='space-y-2'>
-          <h2
-            className='text-balance text-center text-6xl tracking-wide'
-            id='experience'
-          >
-            {t('title')}
-          </h2>
+          <h2 className='text-balance text-center text-6xl tracking-wide'>{t('title')}</h2>
           <p className='text-balance text-center text-lg'>{t('description')}</p>
         </div>
         <div className='flow-root'>
