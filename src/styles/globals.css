@@ -41,42 +41,6 @@
     --radius: 0.5rem;
     --scroll-size: 0rem;
   }
-
-  .dark {
-    --background: 210 32% 23%; /* #27374D */
-    --foreground: 210 52% 90%; /* #DDE6ED */
-
-    --card: 210 32% 23%; /* #27374D */
-    --card-foreground: 210 52% 90%; /* #DDE6ED */
-
-    --popover: 210 32% 23%; /* #27374D */
-    --popover-foreground: 210 52% 90%; /* #DDE6ED */
-
-    --primary: 210 52% 90%; /* #DDE6ED */
-    --primary-foreground: 210 32% 23%; /* #27374D */
-
-    --secondary: 210 27% 42%; /* #526D82 */
-    --secondary-foreground: 210 52% 90%; /* #DDE6ED */
-
-    --muted: 210 26% 68%; /* #9DB2BF */
-    --muted-foreground: 210 52% 90%; /* #DDE6ED */
-
-    --accent: 210 26% 68%; /* #9DB2BF */
-    --accent-foreground: 210 32% 23%; /* #27374D */
-
-    --destructive: 0 84% 60%; /* Red (example destructive color) */
-    --destructive-foreground: 210 52% 90%; /* #DDE6ED */
-
-    --success: 120 50% 40%; /* #339933 */
-    --success-foreground: 210 52% 90%; /* #DDE6ED */
-
-    --error: 0 70% 50%; /* #d92626 */
-    --error-foreground: 210 52% 90%; /* #DDE6ED */
-
-    --border: 210 27% 42%; /* #526D82 */
-    --input: 210 27% 42%; /* #526D82 */
-    --ring: 210 52% 90%; /* #DDE6ED */
-  }
 }
 
 html.lenis,

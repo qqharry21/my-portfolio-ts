@@ -158,6 +158,7 @@ const config = {
     }),
     plugin(({ addVariant }) => {
       addVariant('light', '.light &');
+      // addVariant('light', 'html:not(.dark) &');
     }),
   ],
 } satisfies Config;

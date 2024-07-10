@@ -38,7 +38,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+    >
       <body className={`${notoSans.variable} ${spaceGrotesk.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
