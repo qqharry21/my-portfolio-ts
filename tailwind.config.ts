@@ -8,7 +8,7 @@ import { settings } from './tailwind-settings/settings';
 import { spaces } from './tailwind-settings/spaces';
 
 const config = {
-  darkMode: ['class'],
+  darkMode: 'selector',
   content: ['./src/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
@@ -155,6 +155,9 @@ const config = {
           '-webkit-scrollbar': 'none',
         },
       });
+    }),
+    plugin(({ addVariant }) => {
+      addVariant('light', '.light &');
     }),
   ],
 } satisfies Config;

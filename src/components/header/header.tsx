@@ -1,11 +1,12 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { useTranslations } from 'next-intl';
 
-import Logo from '@/public/assets/dark_logo.svg';
+import LogoDark from '@/public/assets/dark_logo.svg';
+import LogoLight from '@/public/assets/light_logo.svg';
 
 import LocaleSwitcher from '../locale-switcher';
+import { ThemeImage } from '../theme-image';
 
 import { MobileNav } from './mobile-nav';
 import { Nav } from './nav';
@@ -40,8 +41,9 @@ export const Header = () => {
           className='relative size-16'
           passHref
         >
-          <Image
-            src={Logo}
+          <ThemeImage
+            srcDark={LogoDark}
+            srcLight={LogoLight}
             alt='logo'
             className='h-auto w-full object-contain object-center'
             priority
