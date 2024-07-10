@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 import { useMediaQuery } from '@/hooks/use-media-query';
 import { useScrollAnimate } from '@/hooks/use-scroll-animate';
+import { useScrollLock } from '@/hooks/use-scroll-lock';
 
 import { Magnetic } from './magnetic';
 
@@ -25,6 +26,8 @@ export const Hamburger = ({
   });
 
   const isTablet = useMediaQuery('(max-width: 768px)');
+
+  useScrollLock(isOpen);
 
   useEffect(() => {
     if (isTablet) {

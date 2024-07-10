@@ -18,3 +18,15 @@ export const formatDate = (
     ...options,
   });
 };
+
+export const throttle = <T extends (...args: any[]) => void>(fn: T, delay = 500) => {
+  let timer: NodeJS.Timeout | null = null;
+
+  return (...args: Parameters<T>) => {
+    if (timer) return;
+    timer = setTimeout(() => {
+      fn(...args);
+      timer = null;
+    }, delay);
+  };
+};

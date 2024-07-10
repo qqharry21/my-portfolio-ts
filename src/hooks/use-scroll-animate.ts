@@ -1,6 +1,8 @@
 import { useAnimate, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 
+import { throttle } from '@/lib/utils';
+
 interface ScrollAnimateProps {
   disabled?: boolean;
   axis?: 'x' | 'y';
@@ -29,26 +31,30 @@ export const useScrollAnimate = <T extends HTMLElement = HTMLElement>(
   const delta = useRef<number>(0);
   const lastScrollY = useRef<number>(0);
 
-  useMotionValueEvent(axis === 'y' ? scrollY : scrollX, 'change', (val) => {
-    if (disabled || !targetEl.current) return;
+  useMotionValueEvent(
+    axis === 'y' ? scrollY : scrollX,
+    'change',
+    throttle((val) => {
+      if (disabled || !targetEl.current) return;
 
-    onAnimate?.(val);
+      onAnimate?.(val);
 
-    const diff = Math.abs(val - lastScrollY.current);
-    const isScrollingDown = val >= lastScrollY.current;
+      const diff = Math.abs(val - lastScrollY.current);
+      const isScrollingDown = val >= lastScrollY.current;
 
-    delta.current += isScrollingDown ? diff : -diff;
-    delta.current = Math.max(-offset, Math.min(offset, delta.current));
+      delta.current += isScrollingDown ? diff : -diff;
+      delta.current = Math.max(-offset, Math.min(offset, delta.current));
 
-    const shouldAnimateEnter = delta.current >= offset && val > threshold;
-    const shouldAnimateExit = delta.current <= -offset || val < threshold;
+      const shouldAnimateEnter = delta.current >= offset && val > threshold;
+      const shouldAnimateExit = delta.current <= -offset || val < threshold;
 
-    if (shouldAnimateEnter) {
-      onAnimateEnter?.();
-    } else if (shouldAnimateExit) {
-      onAnimateExit?.();
-    }
-  });
+      if (shouldAnimateEnter) {
+        onAnimateEnter?.();
+      } else if (shouldAnimateExit) {
+        onAnimateExit?.();
+      }
+    })
+  );
 
   return [targetEl, animate] as const;
 };
