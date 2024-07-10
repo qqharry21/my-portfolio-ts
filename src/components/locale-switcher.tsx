@@ -9,7 +9,7 @@ export default function LocaleSwitcher() {
   return (
     <LocaleSwitcherToggle currentLocale={locale}>
       <TransformText
-        className='select-none font-medium'
+        className='select-none font-medium text-primary hover:text-primary/80 dark:text-primary-foreground dark:hover:text-primary-foreground/80'
         first={locale === 'en' ? 'EN' : '中文'}
         last={locale === 'en' ? '中文' : 'EN'}
       />

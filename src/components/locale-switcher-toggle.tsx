@@ -25,7 +25,7 @@ export const LocaleSwitcherToggle = ({ currentLocale, children }: LocaleSwitcher
 
   return (
     <button
-      className='group inline-flex items-center justify-center gap-x-2 text-center'
+      className='group inline-flex items-center justify-center gap-x-2 text-center text-primary hover:text-primary/80 dark:text-primary-foreground dark:hover:text-primary-foreground/80'
       disabled={isPending}
       onClick={onClick}
     >

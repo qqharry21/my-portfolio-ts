@@ -28,6 +28,10 @@ export const Header = () => {
       href: '#side-projects',
     },
     {
+      name: 'Hype docs',
+      href: '/hype-docs',
+    },
+    {
       name: t('nav.contact'),
       href: '#contact',
     },
