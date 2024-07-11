@@ -49,8 +49,8 @@ export const Hamburger = ({
           data-active={isOpen}
           onClick={() => setOpen(!isOpen)}
         >
-          <div className='transform-style-3d absolute inset-x-0 mx-auto block h-0.5 w-2/5 -translate-y-1 bg-primary-foreground transition-[background-color,transform] duration-500 ease-in-out group-data-[active=true]:translate-y-0 group-data-[active=true]:rotate-45' />
-          <div className='transform-style-3d absolute inset-x-0 mx-auto block h-0.5 w-2/5 translate-y-1 bg-primary-foreground transition-[background-color,transform] duration-500 ease-in-out group-data-[active=true]:translate-y-0 group-data-[active=true]:-rotate-45' />
+          <div className='absolute inset-x-0 mx-auto block h-0.5 w-2/5 -translate-y-1 bg-primary-foreground transition-[background-color,transform] duration-500 ease-in-out transform-style-3d group-data-[active=true]:translate-y-0 group-data-[active=true]:rotate-45' />
+          <div className='absolute inset-x-0 mx-auto block h-0.5 w-2/5 translate-y-1 bg-primary-foreground transition-[background-color,transform] duration-500 ease-in-out transform-style-3d group-data-[active=true]:translate-y-0 group-data-[active=true]:-rotate-45' />
         </button>
       </m.div>
     </Magnetic>

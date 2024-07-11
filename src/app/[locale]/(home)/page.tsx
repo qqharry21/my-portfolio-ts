@@ -9,11 +9,13 @@ import { HomeSideProjects } from './_components/home-side-projects';
 export default function Home() {
   return (
     <ThemeChanger theme='dark'>
-      <HeroBanner />
-      <HomeAboutSection />
-      <HomeExperiences />
-      <HomeSideProjects />
-      <HomeContactSection />
+      <div className='overflow-hidden'>
+        <HeroBanner />
+        <HomeAboutSection />
+        <HomeExperiences />
+        <HomeSideProjects />
+        <HomeContactSection />
+      </div>
     </ThemeChanger>
   );
 }

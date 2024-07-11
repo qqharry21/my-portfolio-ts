@@ -8,5 +8,5 @@ export default function Template({ children }: PropsWithChildren) {
     window.scrollTo(0, 0);
   }, []);
 
-  return <main className='relative min-h-screen overflow-hidden'>{children}</main>;
+  return <main className='relative min-h-screen'>{children}</main>;
 }
