@@ -156,6 +156,16 @@ const config = {
         },
       });
     }),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        '.transform-style-3d': {
+          'transform-style': 'preserve-3d',
+        },
+        '.transform-style-flat': {
+          'transform-style': 'flat',
+        },
+      });
+    }),
     plugin(({ addVariant }) => {
       addVariant('light', '.light &');
       // addVariant('light', 'html:not(.dark) &');
