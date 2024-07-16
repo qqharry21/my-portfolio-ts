@@ -1,6 +1,7 @@
 import { Resend } from 'resend';
 import type { z } from 'zod';
 
+import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 import { ResponseNoticeEmail, ThankYouEmail } from '@/components/email';
@@ -13,7 +14,7 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   const client = await connectDB();
   const session = client.startSession();
   try {

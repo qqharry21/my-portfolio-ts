@@ -79,7 +79,7 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
               variants={navVariants}
             >
               <div className='flex h-full flex-col justify-between'>
-                <div className='mt-32 flex flex-col gap-y-6'>
+                <div className='flex flex-col gap-y-6 md:mt-32'>
                   {routes.map((route) => (
                     <MotionLink
                       key={route.name}

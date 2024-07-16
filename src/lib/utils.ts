@@ -30,3 +30,34 @@ export const throttle = <T extends (...args: any[]) => void>(fn: T, delay = 500)
     }, delay);
   };
 };
+
+/**
+ * Creates a URLSearchParams object from a given searchParams object.
+ *
+ * @param searchParams - The searchParams object containing key-value pairs.
+ * @returns A URLSearchParams object.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function createURLSearchParams(searchParams: Record<string, any>): URLSearchParams {
+  const params = new URLSearchParams();
+  Object.entries(searchParams).forEach(([key, value]) => {
+    if (value) {
+      params.append(key, String(value));
+    }
+  });
+  return params;
+}
+
+export function safeParseJson(input: string) {
+  try {
+    return JSON.parse(input);
+  } catch (error) {
+    console.error(error);
+    try {
+      return JSON.parse(`"${input}"`);
+    } catch (innerError) {
+      console.error(innerError);
+      return input;
+    }
+  }
+}
