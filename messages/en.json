@@ -73,6 +73,32 @@
       "error": "Failed to send message"
     }
   },
+  "journal": {
+    "title": "Work Journal",
+    "date_filter": {
+      "title": "Filter by Date",
+      "option": {
+        "all": "All",
+        "this_week": "Current Week",
+        "this_month": "Current Month",
+        "before_3_months": "Before 3 Months",
+        "before_6_months": "Before 6 Months",
+        "before_last_year": "Before Year"
+      }
+    },
+    "tag_filter": {
+      "title": "Filter by Tag"
+    },
+    "error": {
+      "title": "Oops! Something went wrong.",
+      "button_text": "Try Again"
+    },
+    "empty": {
+      "title": "No Journals Found",
+      "description": "There are no journals available for this date and tag combination. Please try a different date or tag.",
+      "button_text": "Clear Filters"
+    }
+  },
   "form": {
     "name": {
       "label": "Your Name"

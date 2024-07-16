@@ -7,5 +7,7 @@ declare namespace NodeJS {
     readonly RESEND_API_KEY: string;
     readonly MONGODB_URI: string;
     readonly MONGODB_DB: string;
+    readonly NOTION_API_KEY: string;
+    readonly NOTION_DATABASE_ID: string;
   }
 }

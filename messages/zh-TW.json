@@ -73,6 +73,32 @@
       "error": "發送失敗"
     }
   },
+  "journal": {
+    "title": "工作日誌",
+    "date_filter": {
+      "title": "依日期篩選",
+      "option": {
+        "all": "全部",
+        "this_week": "本週",
+        "this_month": "本月",
+        "before_3_months": "三個月前",
+        "before_6_months": "六個月前",
+        "before_last_year": "一年前"
+      }
+    },
+    "tag_filter": {
+      "title": "依標籤篩選"
+    },
+    "error": {
+      "title": "載入失敗",
+      "button_text": "重試"
+    },
+    "empty": {
+      "title": "查無資料",
+      "description": "沒有符合條件的日誌，請嘗試其他篩選條件。",
+      "button_text": "清除篩選條件"
+    }
+  },
   "form": {
     "name": {
       "label": "您的姓名"
