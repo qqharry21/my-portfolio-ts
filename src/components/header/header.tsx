@@ -27,10 +27,10 @@ export const Header = () => {
       name: t('nav.side_projects'),
       href: '#side-projects',
     },
-    {
-      name: 'Journals',
-      href: '/journals',
-    },
+    // {
+    //   name: 'Journals',
+    //   href: '/journals',
+    // },
     {
       name: t('nav.contact'),
       href: '#contact',
