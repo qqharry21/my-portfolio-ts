@@ -29,6 +29,7 @@ const navVariants: Variants = {
   show: {
     clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
     transition: {
+      delayChildren: 0.1,
       duration: 0.8,
       ease: [0.76, 0, 0.24, 1],
       staggerChildren: 0.05,
@@ -48,19 +49,18 @@ const routeVariants: Variants = {
 
 const opacityVariants: Variants = {
   hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.3 } },
+  exit: { opacity: 0, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
+};
+
+const backgroundVariants: Variants = {
+  hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
   exit: { opacity: 0, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
 };
 
 export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
   const [open, setOpen] = useState(false);
-  const segment = useSelectedLayoutSegment();
-  const lenis = useLenis();
-
-  const onClick = (href: string) => {
-    lenis?.scrollTo(href);
-    setOpen(false);
-  };
 
   return (
     <>
@@ -72,67 +72,95 @@ export const MobileNav = ({ routes }: { routes: IRoute[] }) => {
         {open && (
           <>
             <m.div
-              className='fixed right-0 top-0 z-10 h-screen bg-muted px-14 py-24 max-2xs:w-full lg:p-24'
+              className='fixed right-0 top-0 z-10 h-dvh bg-muted px-16 py-32 max-2xs:w-full md:p-24'
               initial='hidden'
               animate='show'
               exit='exit'
               variants={navVariants}
             >
               <div className='flex h-full flex-col justify-between'>
-                <div className='flex flex-col gap-y-6 md:mt-32'>
-                  {routes.map((route) => (
-                    <MotionLink
-                      key={route.name}
-                      href={route.href}
-                      data-active={route.href === `/${segment}`}
-                      className='relative select-none text-center text-4xl before:absolute before:-left-6 before:top-half before:size-2 before:-translate-y-half before:scale-0 before:rounded-full before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:content-none hover:text-primary/80 hover:before:scale-100 focus-visible:before:scale-100 data-[active=true]:before:scale-100 2xs:text-left'
-                      variants={routeVariants}
-                      onClick={() => onClick(route.href)}
-                    >
-                      {route.name}
-                    </MotionLink>
-                  ))}
-                </div>
-                <div className='space-y-8 max-2xs:text-center'>
-                  <m.div variants={opacityVariants}>
-                    <LocaleSwitcher />
-                  </m.div>
-                  <div className='flex items-center gap-x-8 max-2xs:justify-center'>
-                    <ContactLink href='mailto:qqharry21@gmail.com'>
-                      <MailIcon />
-                    </ContactLink>
-                    <ContactLink href='tel:+886929882333'>
-                      <PhoneIcon />
-                    </ContactLink>
-                    <ContactLink
-                      href='https://www.linkedin.com/in/harry-chen-21/'
-                      target='_blank'
-                      rel='noreferrer noopener'
-                    >
-                      <LinkedinIcon />
-                    </ContactLink>
-                    <ContactLink
-                      href='https://github.com/qqharry21'
-                      target='_blank'
-                      rel='noreferrer noopener'
-                    >
-                      <GithubIcon className='size-6 fill-current' />
-                    </ContactLink>
-                  </div>
-                </div>
+                <MobileNavList
+                  routes={routes}
+                  setOpen={setOpen}
+                />
+                <ContactSection />
               </div>
             </m.div>
             <m.div
-              className='fixed left-0 top-0 h-screen w-full bg-black/80 backdrop-blur-sm'
+              className='fixed left-0 top-0 h-dvh w-full bg-black/80 backdrop-blur-sm'
               initial='hidden'
               animate='show'
               exit='exit'
-              variants={opacityVariants}
+              variants={backgroundVariants}
               onClick={() => setOpen(false)}
             />
           </>
         )}
       </AnimatePresence>
     </>
+  );
+};
+
+const MobileNavList = ({
+  routes,
+  setOpen,
+}: {
+  routes: IRoute[];
+  setOpen: (val: boolean) => void;
+}) => {
+  const lenis = useLenis();
+  const segment = useSelectedLayoutSegment();
+
+  const onClick = (href: string) => {
+    lenis?.scrollTo(href);
+    setOpen(false);
+  };
+  return (
+    <div className='flex flex-col gap-y-6 md:mt-24'>
+      {routes.map((route) => (
+        <MotionLink
+          key={route.name}
+          href={route.href}
+          data-active={route.href === `/${segment}`}
+          className='relative select-none text-center text-4xl before:absolute before:-left-6 before:top-half before:size-2 before:-translate-y-half before:scale-0 before:rounded-full before:bg-primary before:transition-all before:duration-500 before:ease-in-out before:content-none hover:text-primary/80 hover:before:scale-100 focus-visible:before:scale-100 data-[active=true]:before:scale-100 2xs:text-left'
+          variants={routeVariants}
+          onClick={() => onClick(route.href)}
+        >
+          {route.name}
+        </MotionLink>
+      ))}
+    </div>
+  );
+};
+
+const ContactSection = () => {
+  return (
+    <div className='space-y-8 max-2xs:text-center'>
+      <m.div variants={opacityVariants}>
+        <LocaleSwitcher />
+      </m.div>
+      <div className='flex items-center gap-x-8 max-2xs:justify-center'>
+        <ContactLink href='mailto:qqharry21@gmail.com'>
+          <MailIcon />
+        </ContactLink>
+        <ContactLink href='tel:+886929882333'>
+          <PhoneIcon />
+        </ContactLink>
+        <ContactLink
+          href='https://www.linkedin.com/in/harry-chen-21/'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          <LinkedinIcon />
+        </ContactLink>
+        <ContactLink
+          href='https://github.com/qqharry21'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          <GithubIcon className='size-6 fill-current' />
+        </ContactLink>
+      </div>
+    </div>
   );
 };

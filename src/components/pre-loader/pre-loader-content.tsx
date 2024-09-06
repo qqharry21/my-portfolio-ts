@@ -1,9 +1,10 @@
+import type { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import TypingAnimation from '../typing-animation';
 
-export const slideUp = {
+const slideUp: Variants = {
   initial: {
     top: 0,
   },
@@ -27,7 +28,7 @@ export default function PreLoaderContent({
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`;
   const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
 
-  const curve = {
+  const curve: Variants = {
     initial: {
       d: initialPath,
       transition: { duration: 1.5, ease: [0.76, 0, 0.24, 1] },
@@ -43,7 +44,7 @@ export default function PreLoaderContent({
       variants={slideUp}
       initial='initial'
       exit='exit'
-      className='fixed z-99 flex min-h-screen w-full items-center justify-center bg-muted text-6xl font-bold'
+      className='fixed z-99 flex min-h-dvh w-full items-center justify-center bg-muted text-6xl font-bold'
     >
       {dimension.width > 0 && (
         <>

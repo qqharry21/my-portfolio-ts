@@ -10,6 +10,7 @@ export const SmoothScroll = ({ children }: PropsWithChildren) => {
         lerp: 0.1,
         duration: 1.5,
         syncTouch: true,
+        touchMultiplier: 0,
       }}
     >
       {children}

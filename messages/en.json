@@ -12,11 +12,15 @@
     "side_projects": "Side Projects",
     "contact": "Contact"
   },
+  "work_status": {
+    "open_to_work": "Open to work!!!!",
+    "open_to_opportunities": "Currently open to opportunities~",
+    "not_open_to_work": "Not currently looking for new opportunities~"
+  },
   "banner": {
     "greeting": "Hello, It's me",
     "introduction": "I love to build things and learn new stuff and always looking for opportunities to improve my skills. Currently working at <company></company>.",
-    "resume_button": "My Resume",
-    "slogan": "Open to work!!!!"
+    "resume_button": "My Resume"
   },
   "about": {
     "content": "I graduated from <school>Tamkang University</school> with a bachelor's degree in Computer Science and Information Engineering. I am proficient in frontend technologies and have extensive experience in backend development. I can quickly understand and resolve problems encountered in projects.\n\nIn my spare time, I enjoy hanging out with friends, shopping, and playing basketball. These activities not only keep me active but also spark my creativity, bringing fresh perspectives to my work.\n\nI have solid technical skills and a passion for learning new things, along with a strong enthusiasm for teamwork. Additionally, I excel in communication, effective collaboration, and maintaining calm and efficiency under pressure. I believe these qualities enable me to iterate quickly and make valuable contributions to your company, helping the team achieve higher goals.",
