@@ -26,47 +26,6 @@
     "content": "I graduated from <school>Tamkang University</school> with a bachelor's degree in Computer Science and Information Engineering. I am proficient in frontend technologies and have extensive experience in backend development. I can quickly understand and resolve problems encountered in projects.\n\nIn my spare time, I enjoy hanging out with friends, shopping, and playing basketball. These activities not only keep me active but also spark my creativity, bringing fresh perspectives to my work.\n\nI have solid technical skills and a passion for learning new things, along with a strong enthusiasm for teamwork. Additionally, I excel in communication, effective collaboration, and maintaining calm and efficiency under pressure. I believe these qualities enable me to iterate quickly and make valuable contributions to your company, helping the team achieve higher goals.",
     "school_href": "http://www.csie.tku.edu.tw/Main.aspx?lang=en"
   },
-  "work_experience": {
-    "title": "Work Experience",
-    "description": "Here are some of the companies I've worked for and the projects I've worked on.",
-    "companies": {
-      "1": {
-        "company": {
-          "name": "Wits",
-          "href": "https://www.wits.com/en"
-        },
-        "job_title": "Frontend Developer",
-        "description": "Independently developed an Overwolf application that automatically recognizes and records gaming highlights, allowing users to easily share clips on social media platforms. I uses React, Redux, Tailwind CSS and TypeScript technology to develop this application. The application has been downloaded over 4,000 times and has more than 250 daily active users at its peak. The client is currently planning to pre-install this app on their own PC devices and integrate it with more related applications."
-      },
-      "2": {
-        "company": {
-          "name": "MiTAC",
-          "href": "https://www.mitac.com/en-global"
-        },
-        "job_title": "Software Engineer / Intern",
-        "description": "Developed backend functionalities for a Foreign Exchange System using Java, Spring MVC, and MySQL. Additionally, I was involved in automated testing and stress testing using Apache JMeter. I also participated in the optimization of the bank background system and used related technologies such as JSP, AJAX, JQuery, and Java."
-      }
-    }
-  },
-  "side_projects": {
-    "title": "Check out what I'm working on",
-    "subtitle": "Side Projects",
-    "description": "I love to work on side projects in my free time, from simple websites to complex web applications. Here are some of the projects I've worked recently.",
-    "projects": {
-      "1": {
-        "name": "Personal Website",
-        "description": "This is a personal website where users can learn about my background, skills, and project experiences, and contact me directly through the site."
-      },
-      "2": {
-        "name": "Omdia Conference Website",
-        "description": "This is a website created for the Omdia conference, where users can easily access event details, session schedules, content, and speaker information, as well as register for the event."
-      },
-      "3": {
-        "name": "CMS System",
-        "description": "Developed a Content Management System (CMS) for a client using Next.js, and MongoDB. The system allows the client to manage and update content on their website easily."
-      }
-    }
-  },
   "contact": {
     "title": "Get in Touch",
     "description": "My inbox is always open. so feel free to send a message to me and I will get back to you as soon as possible.",

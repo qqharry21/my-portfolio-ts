@@ -13,6 +13,8 @@ export default getRequestConfig(async ({ locale }) => {
     messages: {
       ...(await import(`../../messages/${locale}.json`)).default,
       ...(await import(`../../messages/zod/${locale}.json`)).default,
+      ...(await import(`../../messages/side_projects/${locale}.json`)).default,
+      ...(await import(`../../messages/work_experience/${locale}.json`)).default,
     },
     formats: {
       dateTime: {

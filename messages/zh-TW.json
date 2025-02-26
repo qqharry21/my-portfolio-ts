@@ -26,47 +26,6 @@
     "content": "我畢業於<school>淡江大學</school>，取得了資訊工程學系的學士學位。我不僅精通前端技術，還有後端開發的經驗。我能快速理解並解決專案中遇到的問題。\n\n在閒暇之餘，喜歡跟朋友出遊逛街、打籃球，這些活動不僅讓我保持活力，還能激發我的創意，並為工作帶來全新的視角。\n\n我擁有扎實的技術能力，並熱愛學習新知，對團隊合作充滿熱情。此外，我善於溝通，能夠有效協作，並在高壓環境中保持冷靜和高效。我相信自己的這些特質使我能夠快速迭代並為貴公司帶來寶貴的貢獻，幫助團隊達成更高的目標。",
     "school_href": "http://www.csie.tku.edu.tw/Main.aspx?lang=zh-tw"
   },
-  "work_experience": {
-    "title": "工作經歷",
-    "description": "以下是我曾經工作過的公司和參與過的專案",
-    "companies": {
-      "1": {
-        "company": {
-          "name": "緯創軟體 - Wits",
-          "href": "https://www.wits.com/tw"
-        },
-        "job_title": "前端工程師",
-        "description": "我獨立完成開發了一款 Overwolf 應用程式，該應用程式會自動識別和記錄遊戲的亮點，並讓用戶輕鬆在社交平台上分享精華影片。我使用了 React，Redux，Tailwind CSS 和 Typescript 等技術進行開發。它目前已下載超過4,000次，並單日最多超過 250 多個活躍用戶。目前客戶計畫在他們自己的 PC 設備上預安裝此應用程式，並結合更多相關其他應用。"
-      },
-      "2": {
-        "company": {
-          "name": "神通資科 - MiTAC",
-          "href": "https://www.mitac.com"
-        },
-        "job_title": "軟體工程師 / 實習",
-        "description": "我在實習期間使用 Java、Spring MVC 和 MySQL 開發了外匯系統的後端功能。此外，我還參與了使用 Apache JMeter 進行的自動化測試和壓力測試。轉正職後，我還參與了銀行後台系統的優化工作，使用到 JSP、Ajax、Jquery 和 Java 等相關技術。"
-      }
-    }
-  },
-  "side_projects": {
-    "title": "我做了些什麼？",
-    "subtitle": "個人作品",
-    "description": "我喜歡在空閒時間裡進行一些個人作品，從簡單的網站到複雜的 Web 應用程式。以下是我曾經實作過的一些專案。",
-    "projects": {
-      "1": {
-        "name": "個人網站",
-        "description": "這是我的個人網站，讓他人可以透過此網站認識我，了解我的背景、技能和專案經歷，並透過此網站與我聯繫。"
-      },
-      "2": {
-        "name": "Omdia 研討會網站",
-        "description": "這是一個為 Omdia 研討會製作的網站，用戶可以輕鬆獲取會議資訊、演講流程、內容和講師資訊，並進行報名。"
-      },
-      "3": {
-        "name": "CMS 系統",
-        "description": "使用 Next.js 和 MongoDB 開發了一個內容管理系統 (CMS)。該系統允許客戶輕鬆管理和更新他們網站上的內容，並管理使用者權限。"
-      }
-    }
-  },
   "contact": {
     "title": "聯絡我",
     "description": "我的收件箱一直是開放的，所以隨時歡迎發送消息給我，我會盡快回覆您。",

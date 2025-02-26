@@ -1,0 +1,21 @@
+{
+  "side_projects": {
+    "title": "Check out what I'm working on",
+    "subtitle": "Side Projects",
+    "description": "I love to work on side projects in my free time, from simple websites to complex web applications. Here are some of the projects I've worked recently.",
+    "projects": {
+      "1": {
+        "name": "Personal Website",
+        "description": "This is a personal website where users can learn about my background, skills, and project experiences, and contact me directly through the site."
+      },
+      "2": {
+        "name": "Omdia Conference Website",
+        "description": "This is a website created for the Omdia conference, where users can easily access event details, session schedules, content, and speaker information, as well as register for the event."
+      },
+      "3": {
+        "name": "CMS System",
+        "description": "Developed a Content Management System (CMS) for a client using Next.js, and MongoDB. The system allows the client to manage and update content on their website easily."
+      }
+    }
+  }
+}
