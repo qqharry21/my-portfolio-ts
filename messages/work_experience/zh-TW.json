@@ -5,19 +5,19 @@
     "companies": {
       "1": {
         "company": {
-          "name": "緯創軟體 - Wits",
-          "href": "https://www.wits.com/tw"
-        },
-        "job_title": "前端工程師",
-        "description": "我獨立完成開發了一款 Overwolf 應用程式，該應用程式會自動識別和記錄遊戲的亮點，並讓用戶輕鬆在社交平台上分享精華影片。我使用了 React，Redux，Tailwind CSS 和 Typescript 等技術進行開發。它目前已下載超過4,000次，並單日最多超過 250 多個活躍用戶。目前客戶計畫在他們自己的 PC 設備上預安裝此應用程式，並結合更多相關其他應用。"
-      },
-      "2": {
-        "company": {
           "name": "神通資科 - MiTAC",
           "href": "https://www.mitac.com"
         },
         "job_title": "軟體工程師 / 實習",
         "description": "我在實習期間使用 Java、Spring MVC 和 MySQL 開發了外匯系統的後端功能。此外，我還參與了使用 Apache JMeter 進行的自動化測試和壓力測試。轉正職後，我還參與了銀行後台系統的優化工作，使用到 JSP、Ajax、Jquery 和 Java 等相關技術。"
+      },
+      "2": {
+        "company": {
+          "name": "緯創軟體 - Wits",
+          "href": "https://www.wits.com/tw"
+        },
+        "job_title": "前端工程師",
+        "description": "我獨立完成開發了一款 Overwolf 應用程式，該應用程式會自動識別和記錄遊戲的亮點，並讓用戶輕鬆在社交平台上分享精華影片。我使用了 React，Redux，Tailwind CSS 和 Typescript 等技術進行開發。它目前已下載超過4,000次，並單日最多超過 250 多個活躍用戶。目前客戶計畫在他們自己的 PC 設備上預安裝此應用程式，並結合更多相關其他應用。"
       }
     }
   }

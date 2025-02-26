@@ -1,0 +1,25 @@
+{
+  "1": {
+    "image": "https://www.mitac.com.tw/wp-content/uploads/2021/12/mitac-logo.png",
+    "startDate": "2020-07",
+    "endDate": "2022-12",
+    "externalLink": []
+  },
+  "2": {
+    "image": "https://www.wits.com/wp-content/uploads/2021/12/wits-logo.png",
+    "startDate": "2022-12",
+    "endDate": "2024-07",
+    "externalLink": [
+      {
+        "name": "Acer ProCam",
+        "href": "https://www.overwolf.com/app/acer_inc.-planet9_proclip"
+      }
+    ]
+  },
+  "3": {
+    "image": "https://www.wits.com/wp-content/uploads/2021/12/wits-logo.png",
+    "startDate": "2024-07",
+    "endDate": "null",
+    "externalLink": []
+  }
+}
