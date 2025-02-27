@@ -9,15 +9,23 @@
           "href": "https://www.mitac.com/en-global"
         },
         "job_title": "Software Engineer / Intern",
-        "description": "Developed backend functionalities for a Foreign Exchange System using Java, Spring MVC, and MySQL. Additionally, I was involved in automated testing and stress testing using Apache JMeter. I also participated in the optimization of the bank background system and used related technologies such as JSP, AJAX, JQuery, and Java."
+        "description": "Enhance the architecture of the old system to improve program efficiency, add/remove/modify original functions, and adjust the report generation method.\n\n[Implementation Approach]\nFrontend: JSP with JavaScript, jQuery, AJAX.\nBackend: Java, Spring MVC, JPA.\nDatabase: DB2.\nReporting: Birt.\n\n- Participated in the development of functionalities for the Foreign Exchange MVC system, and assisted with functionality testing and stress testing.\n- Revamped the internal legacy system of a bank, developing both the frontend and backend using Java and JSP."
       },
       "2": {
         "company": {
-          "name": "Wits",
+          "name": "Wits - Acer",
           "href": "https://www.wits.com/en"
         },
         "job_title": "Frontend Developer",
-        "description": "Independently developed an Overwolf application that automatically recognizes and records gaming highlights, allowing users to easily share clips on social media platforms. I uses React, Redux, Tailwind CSS and TypeScript technology to develop this application. The application has been downloaded over 4,000 times and has more than 250 daily active users at its peak. The client is currently planning to pre-install this app on their own PC devices and integrate it with more related applications."
+        "description": "- Independently developed Overwolf app - ProClip, an application that automatically recognizes and records gaming highlights, making it easy to share on social platforms.\n- Use React framework to develop the frontend architecture, integrated Overwolf SDKs, and managed state with React-Redux.\n- I use Tailwind CSS framework for styling and use TypeScript standards throughout the entire architecture.\n- Planned and implemented appropriate data structures for data storage and integrated APIs for social sharing functionalities.\n- Since its release, ProClip has achieved 3,500 downloads, 250 daily active users, and has generated over 10,000 reach on its fan page. Currently planned to preload onto the company's own platform."
+      },
+      "3": {
+        "company": {
+          "name": "Wits - Trend Micro",
+          "href": "https://www.wits.com/en"
+        },
+        "job_title": "Frontend Developer",
+        "description": "- Develop and maintain the product support website, assisting customers with troubleshooting, product inquiries, and service updates.\n- Integrate chatbot solutions to enhance user experience.\n- Develop the product service status website, ensuring accurate and real-time information on product availability and system health.\n- Collaborate closely with cross-functional teams to improve product features and ensure seamless integration of support tools."
       }
     }
   }

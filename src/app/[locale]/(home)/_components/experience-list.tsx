@@ -2,9 +2,31 @@ import { ChevronRightIcon, ExternalLinkIcon } from 'lucide-react';
 
 import Link from 'next/link';
 
+import { useTranslations } from 'next-intl';
+
 import type { Experience } from '@/lib/types';
 
-import { BlurImage } from '../blur-image';
+import { BlurImage } from '../../../../components/blur-image';
+
+interface ExperienceListProps {
+  experiences: Experience[];
+}
+
+export const ExperienceList = ({ experiences }: ExperienceListProps) => {
+  const t = useTranslations('common');
+  return (
+    <ul className='space-y-8'>
+      {experiences.map((experience) => (
+        <ExperienceItem
+          key={experience.id}
+          experience={experience}
+          present={t('present')}
+          more={t('read_more')}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export const ExperienceItem = ({
   experience,
@@ -29,7 +51,7 @@ export const ExperienceItem = ({
           <div className='relative shrink-0 select-none overflow-hidden rounded-full border-2 border-secondary bg-background p-1 ring-8 ring-background ring-offset-2 ring-offset-white'>
             <BlurImage
               className='aspect-square size-10 object-contain md:size-12'
-              src={experience.imageUrl}
+              src={experience.image}
               alt={experience.alt}
               width={48}
               height={48}
@@ -63,12 +85,15 @@ export const ExperienceItem = ({
               </div>
             </div>
             <div className='text-left text-sm text-primary/90'>
-              <p className='max-md:text-balance'>{experience.description}</p>
+              <p className='whitespace-pre-wrap max-md:text-balance'>{experience.description}</p>
             </div>
-            {experience.externalLink && (
-              <div className='inline-flex items-center gap-x-2'>
+            {experience.externalLink.map((item) => (
+              <div
+                className='inline-flex items-center gap-x-2'
+                key={item.name}
+              >
                 <Link
-                  href={experience.externalLink}
+                  href={item.href}
                   className='text-primary underline underline-offset-2'
                   prefetch={false}
                   target='_blank'
@@ -78,7 +103,7 @@ export const ExperienceItem = ({
                 </Link>
                 <ExternalLinkIcon size={16} />
               </div>
-            )}
+            ))}
           </div>
         </div>
       </div>

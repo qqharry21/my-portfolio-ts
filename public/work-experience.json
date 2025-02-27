@@ -6,7 +6,7 @@
     "externalLink": []
   },
   "2": {
-    "image": "https://www.wits.com/wp-content/uploads/2021/12/wits-logo.png",
+    "image": "https://www.wits.com/static/images/logo.ba5957ba89b0.svg",
     "startDate": "2022-12",
     "endDate": "2024-07",
     "externalLink": [
@@ -17,9 +17,9 @@
     ]
   },
   "3": {
-    "image": "https://www.wits.com/wp-content/uploads/2021/12/wits-logo.png",
+    "image": "https://www.wits.com/static/images/logo.ba5957ba89b0.svg",
     "startDate": "2024-07",
-    "endDate": "null",
+    "endDate": null,
     "externalLink": []
   }
 }

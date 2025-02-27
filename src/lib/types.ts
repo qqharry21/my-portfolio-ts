@@ -1,16 +1,20 @@
 export type SubmitStatus = 'pending' | 'loading' | 'success' | 'error';
 
+type ExternalLink = {
+  name: string;
+  href: string;
+};
 export interface Experience {
   id: string;
   companyName: string;
   href: string;
-  imageUrl: string;
+  image: string;
   alt: string;
   jobTitle: string;
   description: string;
   startDate: string;
   endDate: string | null;
-  externalLink: string | null;
+  externalLink: ExternalLink[];
 }
 
 export interface IRoute {

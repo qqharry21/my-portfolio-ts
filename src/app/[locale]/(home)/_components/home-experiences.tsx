@@ -1,30 +1,25 @@
-import { useFormatter, useTranslations } from 'next-intl';
+import { getFormatter, getTranslations } from 'next-intl/server';
 
-import { ExperienceList } from '@/components/experience/experience-list';
+import type { Experience } from '@/lib/types';
 
-const experienceMap = {
-  '1': {
-    imageUrl: 'https://www.wits.com/static/images/logo.ba5957ba89b0.svg',
-    startDate: '2022-12-05',
-    endDate: null,
-    externalLink: 'https://www.overwolf.com/app/acer_inc.-planet9_proclip',
-  },
-  '2': {
-    imageUrl: 'https://www.mitac.com.tw/wp-content/uploads/2021/12/mitac-logo.png',
-    startDate: '2020-07-01',
-    endDate: '2022-12-04',
-    externalLink: null,
-  },
+import { ExperienceList } from '@/app/[locale]/(home)/_components/experience-list';
+
+const fetchWorkExperience = async () => {
+  const result = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/work-experience.json`);
+  const data = await result.json();
+  return data as Pick<Experience, 'image' | 'startDate' | 'endDate' | 'externalLink'>[];
 };
 
-export const HomeExperiences = () => {
-  const format = useFormatter();
-  const t = useTranslations('work_experience');
+export const HomeExperiences = async () => {
+  const format = await getFormatter();
+  const t = await getTranslations('work_experience');
 
-  const experienceKeys = ['1', '2'] as const;
+  const data = await fetchWorkExperience();
+
+  const experienceKeys = ['1', '2', '3'] as const;
 
   const experiences = experienceKeys.map((key) => {
-    const experience = experienceMap[key];
+    const experience = data[key];
     return {
       ...experience,
       id: key,

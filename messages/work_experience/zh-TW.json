@@ -13,11 +13,19 @@
       },
       "2": {
         "company": {
-          "name": "緯創軟體 - Wits",
+          "name": "Wits - Acer",
           "href": "https://www.wits.com/tw"
         },
         "job_title": "前端工程師",
         "description": "我獨立完成開發了一款 Overwolf 應用程式，該應用程式會自動識別和記錄遊戲的亮點，並讓用戶輕鬆在社交平台上分享精華影片。我使用了 React，Redux，Tailwind CSS 和 Typescript 等技術進行開發。它目前已下載超過4,000次，並單日最多超過 250 多個活躍用戶。目前客戶計畫在他們自己的 PC 設備上預安裝此應用程式，並結合更多相關其他應用。"
+      },
+      "3": {
+        "company": {
+          "name": "Wits - Trend Micro",
+          "href": "https://www.wits.com/tw"
+        },
+        "job_title": "Frontend Developer",
+        "description": "- 開發並維護產品支援網站，協助客戶進行故障排除、產品詢問及服務更新。\n- 整合聊天機器人解決方案，提升使用者體驗。\n- 開發產品服務狀態網站，確保提供準確及即時的產品可用性與系統健康資訊。\n- 與跨部門團隊密切合作，改進產品功能並確保支援工具的無縫整合。"
       }
     }
   }
